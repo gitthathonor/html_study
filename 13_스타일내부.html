@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>스타일 내부</title>
+        <style>
+            div{
+                color: #90f;
+            }
+            #nameID{
+                width: 100px;
+                height: 100px;
+                background: #fe0;
+                color: #000;
+            }
+            .nameClass{
+                font-size: 30px;
+                color: #f00;
+                font-weight: bold;
+            }
+            .red{
+                color: #f00;
+            }
+            #event{
+                width: 600px;
+                height: 600px;
+                background: rgb(250, 206, 9);
+                border: 3px solid #00f;
+            }
+            #event h2{
+                text-align: right;
+            }
+            #event .photo{
+                text-align: center;
+                /* text-align 속성은
+                 1. 텍스트 정렬 왼/가운데;오른쪽 변경 
+                 2. 인라인요소 태그들도 정렬가능
+                 <span> <strong> <a> <img> ... 
+                 */
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="nameID">id선택자</div>
+        <div class="nameClass">class선택자1</div>
+        <div>
+            <h1>백엔드개발</h1>
+            <ol>
+                <li class="red">Python 파이썬</li>
+                <li>JAVA 자바</li>
+                <li class="red">C++</li>
+                <li>PHP</li>
+            </ol>
+        </div>
+        <div id="event">
+            <h2>이벤트영역</h2>
+            <p class="photo">
+                <img src="img/visual1.jpg" alt="강아지사진">
+            </p>
+        </div>
+    </body>
+</html>
