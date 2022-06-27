@@ -1,0 +1,36 @@
+== 스타일 css 속성 ==
+: 태그의 모양을 변경하기 위해서 style 속성을 사용하게 됨.
+
+1. 인라인 스타일 inline style
+: 태그 직접적으로 스타일 적용하는 방식
+<tag style="property:value"></tag>
+<태그명 style="스타일속성:값"></태그명>
+=> 세미콜론 끊어주고, 띄어쓰기로 작성
+
+
+
+
+2. 내부 스타일 internal style
+3. 외부 스타일 external style
+
+____________________________________________
+* 웹 기본 사이즈 단위 : px
+(%, em, ... )
+
+== 폰트 스타일 ==
+color
+font-size : 12px
+font-weight
+값 bold, normal, lighter, bolder
+값 100~900
+font-style
+값 italic (이탤릭, 기울임)
+값 normal (기본값)
+text-decoration
+값 underline(밑줄)
+값 line-through(중간줄)
+값 none(줄없애기)
+text-align : 문단정렬(가로)
+값 left
+값 center
+값 right
