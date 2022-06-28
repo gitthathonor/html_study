@@ -118,3 +118,24 @@ margin:값1                : 기본값(사방동일)
 
 * 더블 마진 : 양쪽의 여백이 만나게 되면, 큰 쪽의 여백이 적용된다.(여백이 합쳐지지 않는다.)
 * 이 현상을 막기 위해서 위에서부터 기준을 잡아서 내려온다.
+
+____________________________________________
+* 태그의 배치를 위한 스타일 속성(가로배열)
+
+1) float속성 / ::after 가상선택자
+
+2) display속성
+ 1. display:inline-block 
+ 
+ 2. table
+    display:table
+    display:table-cell
+
+ 3. flex (Responsive Web)
+    display:flex
+    display-direction:column
+
+ 4. css Grid
+    display:Grid
+    grid-template-columns : 100px 100px 100px
+    grid-template-row : 100px 100px
