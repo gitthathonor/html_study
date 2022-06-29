@@ -117,6 +117,104 @@
             }
             
 
+
+            #box2{
+                background: #aaf;
+                width: 881px;
+            }
+
+            #box2 h1{
+                font-size: 22px;
+                margin-bottom: 20px;
+            }
+
+            #box2 .product{
+                /* 285+1+10=297 <- li w
+                (297*3)-10 = 881
+                */
+                width: 881px;
+
+            }
+
+            #box2 .product ul::after{
+                content: "";
+                display: block;
+                clear: both;
+            }
+            #box2 .product ul{
+                
+            }
+
+            #box2 .product ul li{
+                width: 285px;
+                border: 1px solid #888;
+                background: #fff;
+                float: left;
+                margin-right: 10px;
+            }
+
+            
+
+            #box2 .product ul li:last-child{
+                margin-right: 0;
+            }
+
+            #box2 .product ul li .photo{
+                border-bottom: 1px solid #ccc;
+
+            }
+
+            /* ul li .txt */
+            #box2 .product ul li .txt{
+                
+            }
+
+            #box2 .product ul li .txt .name{
+                padding: 15px;
+                font-size: 16px;
+            }
+
+            /* price */
+            #box2 .product ul li .txt .price{
+                padding: 0 15px 15px;
+            }
+
+            #box2 .product ul li .txt .price .percent{
+                color: #f00;
+                font-size: 20px;
+                font-weight: bold;
+            }
+
+            #box2 .product ul li .txt .price .sale{
+                font-size: 20px;
+            }
+
+            #box2 .product ul li .txt .price .count{
+                font-size: 11px;
+                color: #778;    
+            }
+            /* price */
+
+            /* deli */
+            #box2 .product ul li .txt .deli{
+                background: #ccc;
+                font-size: 12px;
+                padding: 10px 15px;
+                text-align: right;
+            }
+            /* deli */
+
+
+
+            /* hover */
+
+            #box2 .product ul li:hover{
+                border: 1px solid #f00;
+            }
+
+            #box2 .product ul li .txt .name:hover{
+                text-decoration: underline;
+            }
         </style>
     </head>
 
@@ -139,7 +237,7 @@
         </div>
         <div id="box2">
             <h1>11번가 쇼킹딜</h1>
-            <div>
+            <div class="product">
                 <ul>
                     <li><a href="#">
                         <div class="photo">
@@ -149,8 +247,44 @@
                             <p class="name">
                                 20%쿠폰가 4,900원! 지오다노 본사 여름 BEST 단독
                             </p>
-                            <p class="price"></p>
-                            <p class="deli"></p>
+                            <p class="price">
+                                <span class="percent">43%</span>
+                                <strong class="sale">31,000원</strong>
+                                <span class="count">25,768원 구매</span>
+                            </p>
+                            <p class="deli">무료배송</p>
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="photo">
+                            <img src="img/11st2.jpg" alt="핸디선풍기...">
+                        </div>
+                        <div class="txt">
+                            <p class="name">
+                                올여름 시원하게 루메나 신제품 핸디선풍기
+                            </p>
+                            <p class="price">
+                                <span class="percent">쇼핑딜가</span>
+                                <strong class="sale">19,500원</strong>
+                                <span class="count">추천상품</span>
+                            </p>
+                            <p class="deli">쇼킹딜 추천상품</p>
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="photo">
+                            <img src="img/11st3.jpg" alt="얼리버드특가...">
+                        </div>
+                        <div class="txt">
+                            <p class="name">
+                                베베쥬 여름OPEN 여름 신상 얼리버드 특가
+                            </p>
+                            <p class="price">
+                                <span class="percent">17%</span>
+                                <strong class="sale">7,900원</strong>
+                                <span class="count">29,768원 구매</span>
+                            </p>
+                            <p class="deli">무료배송</p>
                         </div>
                     </a></li>
                 </ul>
