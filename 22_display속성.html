@@ -15,9 +15,30 @@
                 display: inline-block;
                 /*  
                     inline-block : 인라인요소 + 블록요소 특징 둘 다 가짐.
+                    - 인라인 요소
+                    - 블록요소 (공간인식)
                 */
                 /* display:block */
             }
+
+            p{
+                width: 100px;
+                height: 50px;
+                background: #fea;
+            }
+            
+            
+            /* 안보이게 처리 */
+            p strong{
+                display: none;
+            } 
+
+            /* 마우스 p hover시 strong 보이게 처리 */
+            p:hover strong{
+                /* display: contents; */
+                display: block;
+            }
+            
         </style>
     </head>
 
@@ -30,5 +51,9 @@
         <span>span태그</span>
         <span>span태그</span>
         <span>span태그</span>
+
+        <p>
+            <strong>strong태그</strong>
+        </p>
     </body>
 </html>
