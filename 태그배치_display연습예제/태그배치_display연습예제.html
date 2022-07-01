@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8">
+        <title>태그배치_display연습</title>
+        <style>
+            /* 초기화 설정 */
+            *{
+                margin: 0;
+                padding: 0;
+                font-size: 16px;
+                line-height: 20px;
+                font-family: "맑은고딕" sans-serif;
+            }
+
+            ul{
+                list-style: none;
+            }
+
+            a{
+                text-decoration: none;
+                color: #111;
+            }
+
+            img{
+                vertical-align: top;
+                border: none;
+            }
+            /* 초기화 설정 */
+
+            #wrap{
+                width: 980px;
+            }
+
+            #wrap .header{
+                height: 150px;
+                margin-top: 30px;
+                margin-bottom: 50px;
+                border-bottom: 1px solid #111;
+                
+            }
+            #wrap .header .logo{}
+
+
+            #wrap .header .logo::after{
+                content: "";
+                display: block;
+                clear:both;
+            }
+
+            #wrap .header .logo p{
+                float: left;
+                margin-bottom: 20px;
+            }
+
+            #wrap .header .logo .logo_lg{
+                border-right: 1px solid #111;
+                padding-right: 20px;
+            }
+
+            #wrap .header .logo .logo_lg a{
+                font-size: 40px;
+                font-weight: bold;
+                color: #f00;
+                padding-left: 20px;
+            }
+
+
+            #wrap .header .logo .logo_best{ 
+                font-weight: bold;
+                font-size: 40px;
+                font-family: "맑음 고딕";
+                padding-left: 20px;
+            }
+            
+            /* menu1 */
+            #wrap .header .menu1::after{
+                content:"";
+                display: block;
+                clear: both;
+            }
+
+            #wrap .header .menu1 ul::after{
+                content:"";
+                display: block;
+                clear: both;
+            }
+
+            #wrap .header .menu1{
+                margin-left: 260px;
+            }
+
+            #wrap .header .menu1 ul{
+                margin-bottom: 20px;
+            }
+
+            #wrap .header .menu1 ul  li{
+                float: left;
+                width: 120px;
+                height: 20px;
+                border-radius: 20px;
+                text-align: center;
+                padding: 10px 0;
+                margin-right: 20px;
+                border: 2px solid #636361;
+            }
+
+            #wrap .header .menu1 ul:last-child{
+                margin-left: 0;
+            }
+
+            #wrap .header .menu1 ul li:hover{
+                background: #f00;
+                border: 2px solid #f00;
+            }
+
+            /* 3번째 리스트 active */
+
+            #wrap .header .menu1 ul #active{
+                background: #f00;
+                border: 2px solid #f00;
+                color: #fff;
+            }
+            
+            
+            /* menu1 */
+            
+
+            /* menu2 */
+            #wrap .header .menu2{
+
+            }
+            #wrap .header .menu2::after{
+                content:"";
+                display: block;
+                clear: both;
+            }
+
+            #wrap .header .menu2 ul li{
+                display: inline-block;
+                border-right: 1px solid #111;
+                font-size: 14px;
+                line-height: 14px;
+                padding: 0 20px;
+            }
+            
+            /* menu2 */
+
+            /* contents */
+            
+            #wrap .contents .title{
+                text-align: center;
+                margin-bottom: 15px;
+                font-weight: bold;
+                font-size: 25px;
+            }
+
+
+            #wrap .contents .info{
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+
+            /* 사진 크기 조절 */
+            #wrap .contents .event ul li .photo img{
+                width: 300px;
+            }
+            
+            /* contents 각 li */
+
+            #wrap .contens .event ul::after{
+                content:"";
+                display: block;
+                clear: both;
+            }
+
+            #wrap .contents .event ul li{
+                float: left;
+                margin-right: 40px;
+            }
+
+            #wrap .contents .event ul li:last-child{
+                margin-right: 0;
+            }
+            
+
+            /* 이벤트글 */
+            #wrap .contents .event ul li .txt{
+                font-size: 18px;
+                text-align: center;
+                padding: 12px;
+                background: #fff;
+            }
+            
+            /* 이벤트명 */
+
+            #wrap .contents .event ul li .txt .tit{
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+
+            #wrap .contents .event ul li .txt .date{
+                font-size: 12px;
+                color: #636361;
+            }
+
+            /* class="event" hover */
+
+            #wrap .contents .event .txt:hover{
+                background: #fee;
+            }
+
+            #wrap .contents .event .txt .tit:hover{
+                color: #f00;
+                text-decoration: underline;
+            }
+
+
+
+            /* contents */
+
+                        
+        </style>
+    </head>
+
+    <body>
+        <div id="wrap">
+            <!-- header -->
+            <div class="header">
+                <div class="logo">
+                    <p class="logo_lg"><a href="https://www.lge.co.kr/" target="_blank">LG전자</a></p>
+                    <p class="logo_best">BEST SHOP</p>
+                </div>
+                <div class="menu1">
+                    <ul>
+                        <li>매장안내</li>
+                        <li>매장상담예약</li>
+                        <li id="active">이벤트</li>
+                        <li>혜택안내</li>
+                        <li>제품정보</li>
+                    </ul>
+                </div>
+                <div class="menu2">
+                    <ul>
+                        <li>로그인</li>
+                        <li>브랜드소개</li>
+                        <li>B2B</li>
+                        <li style="border-right: none;">LGE.COM</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- header -->
+
+            <!-- content -->
+            <div class="contents">
+                <div class="title">베스트샵 이벤트</div>
+                <div class="info">이벤트 소식받고! 다양한 혜택받고!</div>
+                <div class="event">
+                    <ul>
+                        <li>
+                            <div class="photo"><img src="images/event_01.jpg"></div>
+                            <div class="txt">
+                                <div class="tit">LG 휘센 2022 미리구매 대축제</div>
+                                <div class="date">2022.05.17 ~ 2022.06.30</div>
+                            </div>
+                            
+                        </li>
+                        <li>
+                            <div class="photo"><img src="images/event_02.png"></div>
+                            <div class="txt">
+                                <div class="tit">LG전자 베스트샵 6월 오브제 웨딩페어</div>
+                                <div class="date">2022.05.31 ~ 2022.06.30</div>
+                            </div>
+                            
+                        </li>
+                        <li>
+                            <div class="photo"><img src="images/event_03.jpg"></div>
+                            <div class="txt">
+                                <div class="tit">7월 소형가전 한정수량 특가 이벤트</div>
+                                <div class="date">2022.06.30 ~ 2022.07.31</div>
+                        </div>
+                            
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- content -->
+            
+        </div>
+    </body>
+</html>
