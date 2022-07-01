@@ -1,0 +1,22 @@
+/* 전체 초기화 */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    color: #111;
+    text-decoration: none;
+}
+
+img{
+    border: none;
+    vertical-align: top;
+}
+/* 전체 초기화 */
+
+/* wrap */
