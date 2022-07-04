@@ -1,5 +1,135 @@
 /* 실제 디자인 stylesheet */
+@charset "utf-8";
 
 textarea{
-    
+    width: 85%;
+    height: 300px;
+    border: 1px solid #333;
+    margin: 15px;
+    padding: 15px;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: 'Noto Sans KR', sans-serif;
 }
+
+h1, h2{
+    margin: 30px;
+}
+
+#percent{
+    width: 80%;
+    height: 200px;
+    background: #fcc;
+}
+#percent .per{
+    width: 50%;
+    height: 150px;
+    background: #cdd;
+}
+#percent .per .cent{
+    width: 50%;
+    height: 150px;
+    background: #abb;
+}
+
+/* 부모태그 w기준으로 공간을 비례적용
+% 비율의 단위 */
+
+/* == 가변크기로 컨텐츠를 가로배열 할 때
+가로전체 : 100%
+2개 : 50%
+3개 : 33.3333333%
+4개 : 25%
+5개 : 20%
+6개 : 16.66666%
+=> 소수점 3~5가지 까지 작성
+*/
+
+#d1{
+  /* width: 980px;   */
+  width: 51.0416%;
+  background: #ccc;
+}
+
+#d1 p{
+    height: 300px;
+    float: left;
+}
+
+
+#d1 p:nth-child(1){
+    /* width: 350px; */
+    width: 35.7142%;
+    background: #f6c;
+}
+#d1 p:nth-child(2){
+    width: 20.4081%;
+    background: #fc2;
+}
+#d1 p:nth-child(3){
+    width: 43.8775%;
+    background: #5fd;
+}
+/*  
+== 가변 공식 ==
+(원하는 w/ 부모 w) X 100 = %
+(980/1920) * 100 = 51.0416 %
+(350/980) * 100 = 35.7142 %
+(200/980) * 100 = 20.4081 %
+(430/980) * 100 = 43.8775 %
+
+*/
+
+
+#d2{}
+#d2 p{
+    width: 400px;
+    height: 200px;
+    background: #aee;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+#d2 .p1{
+    box-sizing: content-box;
+    /*  
+    기본값. 실제 컨텐츠 공간, 영역 자체가
+    w, h 속성의 범위로 인식됨.
+    */
+}
+#d2 .p2{
+    box-sizing: border-box;
+    /*  
+    테두리 끝-끝 영역의 w,h 속성의 범위로 인식함.
+    width, height (padding, border 포함)
+    margin 불포함
+    */
+}
+
+#d3{
+    background: #ddd;
+    margin: 3%;
+}
+
+#d3 p{
+    width: 22%;
+    height: 150px;
+    background: #5af;
+    float: left;
+    margin-right: 4%;
+}
+
+
+#d3 p:last-child{
+    margin-right: 0;
+}
+
+
+/*  
+모바일화면 : 500
+모바일베젤 : 15 (15/500)*100 = 3%
+박스4 : 110      (110/500)*100 = 22%
+사이여백 : 20   (20/500)*100 = 4%
+*/
+
+
+
