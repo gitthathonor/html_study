@@ -132,4 +132,52 @@ h1, h2{
 */
 
 
+html{
+    font-size: 25px;
+}
+
+.text{
+    border: 1px solid #333;
+    height: 200px;
+}
+
+.text li{
+    display: inline-block;
+    margin-right: 30px;
+}
+
+
+.text .em{
+    font-size: 2em;
+}
+
+
+.text .rem{
+    font-size: 2rem;
+}
+
+#box1{
+    background: #ddd;
+    padding: 20px;
+    margin-bottom: 150px;
+}
+
+
+.d1::before{
+    content:"안녕하세요";
+    display:block;
+    width: 100px;
+    height: 100px;
+    background: #fc0;
+}
+
+.d1::after{
+    content:"안녕히가세요";
+    display:block;
+    width:100px;
+    height:50px;
+    background:#aff;
+}
+
+
 

@@ -90,5 +90,77 @@
             <p>박스4</p>
         </div>
 
+        <h2>상대단위 em(비례적용)</h2>
+        <textarea>
+            em 단위 : 상대적인 단위. 배수로 적용
+
+            1em = 1배수
+
+            부모태그 글자크기가 지정되었을 경우,
+            자식태그 글자크기 상속받음
+            단, 사용되어지는 속성에 따라 기준이 달라짐
+            주로 폰트와 관련된 속성에서 많이 적용되어짐
+
+            1em = 16px = 대문자 M
+            기본 : 글자크기 px/16 = em
+
+            ex) 부모태그 16px
+                 자식태그 1em (=16px)
+                 자식태그 1.5em(=16 * 1.5=24px)
+
+                 ---------
+                 선택자 {font-size:32px; line-height:1em;}
+                 => 폰트 32와 동일하게 줄높이 1em(1배) = 32px로 적용해라
+                 => 폰트 = 줄높이
+        </textarea>
+
+        <h2>상속문제해결 rem</h2>
+        <textarea>
+            rem 단위 : root em(root = 최상위)
+            최상위 html 태그를 기준으로 인식하기 때문에
+            상속문제 발생하지 않음
+
+            예) reset.css : 16px
+                태그 상관없이 : 1rem(=reset 기준 16)
+
+        </textarea>
+        <ul class="text">
+            <li class="em">em단위</li>
+            <li class="rem">rem단위</li>
+        </ul>
+
+        <h2>가변폰트</h2>
+        <textarea>
+            가변폰트 : 커졌다 작아졌다 하는 폰트
+
+
+            vw 단위 : viewport width (뷰포트 1vw=1%)
+            vh 단위 : viewport height (뷰포트 1vh=1%)
+
+            뷰포트 : 실제 보이는 화면
+
+            * 스크린 크기에 맞춰 상대적 크기를 반환
+            전체 : 100vw / 100vh
+
+            * 일반 크기 측정 사용가능
+
+        </textarea>
+
+        <h2>가상 클래스 기본</h2>
+        <textarea>
+            가상 태그를 생성해서 사용할 수 있는 태그
+            : html 문서를 작성 안 했지만,
+
+            선택자::before{} => 선택자 첫째자식 자리에 가상태그 생성
+            선택자::after{} => 선택자 막내자식 자리에 가상태그 생성
+
+            -가상태그 : 인라인요소
+            -가상태그를 사용하기 위해 필수속성 content:""
+        </textarea>
+        <div id="box1">
+            <div class="d1">
+                <strong>클래스 d1 strong 태그 기준</strong>
+            </div>
+        </div>
     </body>
 </html>

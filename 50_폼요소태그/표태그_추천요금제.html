@@ -7,21 +7,20 @@
         <title>표태그_추천요금제</title>
     </head>
     <body>
-        <table style="width 500px; border: 1px solid #333;">
+        <table style="width: 500px; border: 1px solid #333;"
+        cellpadding="0" cellspacing="0" >
             <caption style="background:#333; color:#fff;
             font-size:18px; height:30px; font-weight: bold;;">SK텔레콤 추천 요금제</caption>
             <thead style="background: #ccc; height: 30px;">
                 <tr>
-                    <td>상품명</td>
-                    <td>용량</td>
-                    <td>월정액</td>
+                    <th style="border: 1px solid #333">상품명</th>
+                    <th style="border: 1px solid #333">용량</th>
+                    <th style="border: 1px solid #333">월정액</th>
                 </tr>
             </thead>
-            <tfoot>
+            <tfoot style="background: #fe9; color: #f00;">
                 <tr>
-                    <td>추천 요금제순의 요금제 리스트입니다.</td>
-                    <td></td>
-                    <td></td>
+                    <td colspan="3">추천 요금제순의 요금제 리스트입니다.</td>
                 </tr>
             </tfoot>
             <tbody>
@@ -41,7 +40,22 @@
                     <td>51,000원</td>
                 </tr>
             </tbody>
-            
         </table>
+        <!--  
+            * 웹표준을 위한 테이블태그
+            <caption></caption> : 표제목
+            (표 컨텐츠 바로 위, 가운데 정렬)
+            <th></th> : table td header(글자 두껍게, 가운데 정렬)
+            <thead></thead> : 표의 상단(제목)
+            <tfoot></tfoot> : 표의 하단
+            <tbody></tbody> : 표의 본문내용
+
+            * 표 자체 태그 속성
+            colspan 속성 : 가로칸 합치기
+            rowspan 속성 : 세로칸 합치기
+
+            colspan="3" : 합치는 칸의 갯수 작성. 합친 후 나머지
+                              <td> 삭제해야함.
+        -->
     </body>
 </html>
