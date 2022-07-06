@@ -111,12 +111,34 @@
     </textarea>
     <script>
         // prompt('질문입니다','');
-
-        var eng = prompt('영어점수는?','');
-        var math = prompt('수학점수는?','');
         
-        var total = (Number(eng) + Number(math)) / 2;
-        document.write(total);
+        // var eng = prompt('영어점수는?',''); //70
+        // var math = prompt('수학점수는?',''); //30
+        
+        // var total = (Number(eng) + Number(math)) / 2;
+        // document.write(total);
+        // 출력 3515 prompt 받은 값은 문자형으로 인식
+        // (70+30)=7030 / 2 = 3515
+        // 나누기일때는 숫자형이 아니더라도
+        // => 숫자형 자동변환 인식
+        // 자동 형변환
+
+        // 문자형, 숫자형 변환
+        var t1 = String(true);
+        console.log(typeof t1);
+
+        var nums = Number(1234);
+        console.log(typeof nums);
+
+        console.log(Number ('1234abcd'));
+        // 문자열 안에 문자 abcd 포함되어 있으면
+        // NaN Not a number
+        
+        console.log(Number(true));
+        console.log(Number(false));
+
+        
+
     </script>
 </section>
 </body>
