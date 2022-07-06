@@ -231,7 +231,21 @@
     </div>
     <!--.wrap-->
     <style>
-        .f5 {}
+        .f5 {
+            height: 400px;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-around;
+            /*  
+            align-content: 여러줄 세로정렬 여백배치
+            align-content:stretch;
+            align-content:flex-start;
+            align-content:flex-end;
+            align-content:center;
+            align-content:space-around;
+            align-content:space-between;
+            */
+        }
 
         .f5>div {
             height: 100px;
@@ -260,8 +274,6 @@
 
 
 
-
-
     <h2>7) flex item 배치순서변경</h2>
     <div class="wrap f7">
         <div id="d1">d1 첫째</div>
@@ -270,7 +282,19 @@
     </div>
     <!--.wrap-->
     <style>
-        .f7 {}
+        .f7 {
+            /* display:flex; 가 전제되어야 한다. */
+            display: flex; 
+            /*  
+            플렉스 아이템 순서 설정
+            {order:숫자}
+            양수(+) : 숫자값 순서대로
+            음수(-) : (-)숫자값이 큰 순서대로 배열됨
+            - 웹접근성 측면에서 시각장애인 분들을 위해 
+            스크린 리더기로 읽을 때 order를 이용해
+            순서를 변경한 것은 의미가 없음
+            */
+        }
 
         .f7>div {
             height: 100px;
@@ -278,14 +302,17 @@
 
         .f7>#d1 {
             background: #fac;
+            order: 3;
         }
 
         .f7>#d2 {
             background: #afc;
+            order: -1;
         }
 
         .f7>#d3 {
             background: #acf;
+            order: -3;
         }
     </style>
 
@@ -301,7 +328,19 @@
     </div>
     <!--.wrap-->
     <style>
-        .f8 {}
+        .f8 {
+            display: -webkit-flex;
+            display: flex;
+            /*
+            flex:flex-grow flex-shrink flex-basis  
+            1) flex-grow : 늘림 / 부모태그에 여백 있을 때 아이템 크기 늘릴 수 있음
+
+            2) flex-shrink : 줄임 / 부모태그 아이템 크기가 넘칠 때 줄일 수 있음
+
+            3) flex-basis : 기본 / 아이템의 기본 크기 지정
+
+            */
+        }
 
         .f8>div {
             height: 100px;
@@ -309,14 +348,17 @@
 
         .f8>#d1 {
             background: #ffc;
+            flex: auto;
         }
 
         .f8>#d2 {
             background: #fe1;
+            flex: 3 1 auto;
         }
 
         .f8>#d3 {
             background: #fc0;
+            flex: auto;
         }
     </style>
 

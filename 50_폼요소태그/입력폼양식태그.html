@@ -5,11 +5,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>입력폼양식태그</title>
-        <style>
-            ul{
-                list-style: none;
-            }
-        </style>
+        <link href="css/reset.css" rel="stylesheet">
+        <link href="css/main.css" rel="stylesheet">
     </head>
 
     <body>
@@ -26,7 +23,8 @@
             <ul>
                 <li>
                     <label for="id">아이디 : </label>
-                    <input type="text" name="user_id" placeholder="아이디를 입력해주세요" id="id">
+                    <input type="text" name="user_id" placeholder="아이디를 입력해주세요" id="id"
+                    minlength="4" maxlength="15" size="10">
                 </li>
                 <li>
                     <label for="psw">비밀번호 : </label>
@@ -34,6 +32,30 @@
                 </li>
             </ul>
             <input type="submit" value="전송">
+        </fieldset>
+
+        <fieldset>
+            <legend>개인 정보 입력</legend>
+            <ul>
+                <li>
+                    <label for="name">이름</label>
+                    <input type="text" id="name">
+                </li>
+                <li>
+                    <label for="major">전공학과</label>
+                    <input type="text" id="major">
+                </li>
+                <li>
+                    <h3>성별이 무엇인가요?</h3>
+                    <input type="radio" id="m" name="gen"> 
+                    <label for="m">남성</label>
+
+                    <input type="radio" id="fm" name="gen"> 
+                    <label for="fm">여성</label>
+                    
+                </li>
+            </ul>
+
         </fieldset>
     </form>
 
