@@ -52,10 +52,51 @@
 
                     <input type="radio" id="fm" name="gen"> 
                     <label for="fm">여성</label>
-                    
+                </li>
+                <li>
+                    <h3>관심있는 과목은 무엇인가요?</h3>
+                    <input type="checkbox" id="html5" name="subject">
+                    <label for="html5">html5</label>
+
+                    <input type="checkbox" id="css3" name="subject">
+                    <label for="css3">css3</label>
+
+                    <input type="checkbox" id="js" name="subject">
+                    <label for="js">Javascript</label>
+                </li>
+                <li>
+                    <h3>난이도를 선택하세요</h3>
+                    <select name="level" size="3" multiple>
+                        <option value="1" selected>초급</option>
+                        <option value="2">중급</option>
+                        <option value="3">고급</option>
+                    </select>
+                </li>
+                <li>
+                    <h3>전공분야를 선택하세요</h3>
+                    <select>
+                        <optgroup label="design">
+                            <option>웹디자인</option>
+                            <option>편집디자인</option>
+                            <option>제품디자인</option>
+                        </optgroup>
+                        <optgroup label="programming">
+                            <option selected>백엔드</option>
+                            <option>프론트엔드</option>
+                            <option>풀스택</option>
+                        </optgroup>
+                    </select>
+                </li>
+                <li>
+                    <h3>사용 언어를 직접 입력하세요</h3>
+                    <input type="text" name="language" list="langlist">
+                    <datalist id="langlist">
+                        <option label="한국어" value="korean"></option>
+                        <option label="영어" value="english"></option>
+                        <option label="중국어" value="chinese"></option>
+                    </datalist>
                 </li>
             </ul>
-
         </fieldset>
     </form>
 

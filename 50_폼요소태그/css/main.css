@@ -60,4 +60,38 @@ required : 필수로 데이터를 입력하게 하는 속성
 
 <label for="id명 동일">텍스트</label>
 <input type="값" id="id명">
+
+
+________________________________________________
+== 선택 목록 양식 ==
+<select name="level" size="3" multiple>
+    <option value="1" selected>초급</option>
+    <option value="2">중급</option>
+    <option value="3">고급</option>
+</select>
+value="값" : 서버 전송값
+=> 선택1을 선택시 선택1이 전송되는 것이 아니라
+value 속성값 1이 전달됨
+
+size : 미리 선택지 펼쳐서 보여줌
+selected : 선택 미리 지정
+multiple : 다중선택가능(ctrl + 클릭)
+
+
+== <optgroup>
+: 선택목록이 너무 많을 경우 여러 항목을 그룹핑
+(하위그룹 데이터만 선택가능)
+<optgroup label="그룹명">
+....
+</optgroup>
+
+== <datalist>
+: user가 선택 대신 직접 입력할 때 사용
+자동 완성 기능과 유사함. <input>과 함께 사용됨
+
+list="id동일" : 데이터 목록 사용 선언
+label="이름" : user 표시 내용. 지정 안 할시 value 값 표시
+
+
+
 */
