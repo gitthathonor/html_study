@@ -82,16 +82,111 @@
             document.write('아직 시간이 안 되었습니다');
         }
 
+        document.write('<br>');
         
-        var game = prompt('홀짝 게임 시작','');
-        if(Number(game)%2 == 0) {
-            console.log('짝수');
-        } else {
-            console.log('홀수');
-        }
+        // var game = prompt('홀짝 게임 시작','');
+        // if(Number(game)%2 == 0) {
+        //     console.log('짝수');
+        // } else {
+        //     console.log('홀수');
+        // }
 
         var outs = confirm('정말 탈퇴 하시겠습니까?');
         
+        if(outs) { //확인 = true = 탈퇴
+            document.write('<strong style="color:red;">탈퇴처리 되었습니다.</strong>');
+        } else { //취소 = false = 취소
+            document.write('<strong style="color:blue;">탈퇴 취소 되었습니다.</strong>');
+        }
+
+        /*
+        1) if(조건식)으로 사용할 수 있는 형태
+        : 단순 입력값, 사칙연산(+,-,*,/,%), 비교연산(>,<,>=,<=,==,!=),
+        prompt 입력값, confirm 확인, 취소값(boolean값=true,false)
+
+        2) if(조건식) 거짓(false)으로 인식하는 값
+        : false, undefined, null, 0, NaN...
+        */
+
+        // if(!false) {
+        //     alert('출력');
+        // }
+
+        // var init = prompt('입력된 값이 없어요','');
+        // if(init === '') {
+        //     alert('입력된 값이 없습니다');
+        // } else {
+        //     alert(init);
+        // }
+
+        // var name = prompt('이름은?','');
+        // alert(name);
+        // //prompt로 입력받은 값은 문자열로 인식
+
+        // var check = confirm('확인하시겠습니까?');
+        // if(check) {
+        //     document.write(name);
+        // }
+
+            // var ca = prompt('하루통화량이 얼마입니까?','0');
+            // if(ca <= 100) {
+            //     document.write('알뜰형이시네요!');
+            // } else {
+            //     document.write('통화량이 많으시네요!');
+            // }
+        
+        // var lunch = prompt('가장 먹고 싶은 음식은?','');
+        // var choice = confirm('이 음식을 점심메뉴로 선택하시겠습니까?','');
+        // if(choice) {
+        //     document.write('네! 오늘 점심은 ' + lunch + ' 먹을게요!');
+        // } else {
+        //     document.write('아니오! 다음에 ' + lunch + ' 먹을게요');   
+        // }
+
+        // if 중첩문
+        // 아이디, 비밀번호 인증
+        // 1) 아이디 입력 -> 2) 아이디동일 -> 3)비밀번호 입력
+        // -> 4) 비밀번호동일 -> 로그인성공
+        
+        // 1) 아이디 입력 -> 2) 아이디틀림 -> 3)경고창
+        
+        // 1) 아이디 입력 -> 2) 아이디동일 -> 3)비밀번호입력
+        // -> 4) 비밀번호틀림 -> 5)경고창
+
+        // const id = prompt('아이디 입력하세요', '아이디 입력');
+        
+        // if(id=='홍길동') {
+        //     password = prompt('암호를 입력하세요','암호입력');
+
+        //     if(password==='1234') {
+        //         alert('로그인 성공');
+        //     } else {
+        //         alert('암호가 틀렸습니다!');
+        //     }
+        // } else {
+        //     alert('아이디가 틀렸습니다. 다시 확인하세요!');
+        // }
+
+        const id = '아이유';
+        const pw = '1122';
+
+        const user_id = prompt('당신의 아이디는?','');
+        const user_pw = prompt('당신의 암호는?','');
+
+        if(id == user_id) {
+            if(pw == user_pw) {
+                document.write(user_id + '님 반갑습니다.');
+            } else {
+                alert('암호가 맞지않습니다!');
+                location.reload(); // 브라우저 새로고침
+            }
+        } else {
+            alert('아이디를 다시 확인하세요');
+            location.reload();
+        }
+
+        
+
     </script>
 </section>
 
