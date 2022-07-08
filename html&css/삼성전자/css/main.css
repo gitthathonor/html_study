@@ -26,4 +26,107 @@
     */
    
 }
-#header .gnb{}
+#header .gnb{
+    border-top: 1px solid #aaa;
+    display:flex;
+    justify-content: center;
+}
+
+#header .gnb h2{
+    display: none;
+    /*  
+    시멘틱 태그 사용시 제목태그로 영역 타이틀을
+    지정해 줘야함. 실제 ui 화면상 표기되지 않을 것
+    이므로 아예 삭제함
+    {display:none} 적용시 해당태그 자체가 아예 작성하지 않은 것처럼 인식함
+    */
+}
+
+#header .gnb ul{
+    display: flex;
+    width: 750px;
+    background: #cc2;
+    
+}
+
+#header .gnb ul li{
+    flex: 0 0 150px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+}
+
+#header .gnb ul li a{
+    /* 글자의 형태는 a에 많이 준다. */
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
+#header .gnb ul li:hover a{
+    color: #19f;
+}
+
+/*  
+a:hover로 지정해도 색상은 동일하게 되지만
+li:hover를 대상으로 봐야하는 이유는
+추후 depth2,3... 의 submenu의 hover 범주까지
+고려해야 실제 기능 구현이 가능하기 때문에
+li를 대상으로 보는 것이 좋음.
+*/
+
+#header .gnb ul .active a{
+    color: #19f; 
+}
+
+/* a태그 안의 글자색상 변경은 a 캐그 색상을 변경해야 인식됨
+   : reset.css 초기화 설정 때, 지정한 a 태그의 색상 때문 */
+
+/* main_visual 시작 */
+
+#main_visual{
+    width: 100%;
+    height: 700px;
+    background:url(../img/main_visual.jpg) no-repeat center 0;
+}
+
+
+#main_visual .inner{
+    width: 1200px;
+    height: 700px;
+    background: #cce;
+    margin: 0 auto;
+}
+
+/*  
+== 블록요소 태그를 가운데 배치하는 공식 ==
+블록요소태그{width:값; margin: 0 auto;}
+
+margin-top: 0;
+margin-bottom: 0;
+
+margin-left: auto;
+margin-right: auto;
+
+=> 여백 위, 아래 0
+     여백 왼쪽, 오른쪽 auto
+     "좌우 자동으로 여백 배치해서 가운데 정렬해라"
+     뜻으로 이해하면 됨
+
+     4값 margin: 0 auto 0 auto
+     3값 margin: 0 auto 0
+     2값 margin: 0 auto
+*/
+
+/* main_visual .inner .mv_txt */
+
+#main_visual .inner .mv_txt{
+    
+}
+#main_visual .inner .mv_txt .tit{
+    font-size: 45px;
+    line-height: 51px;
+}
+#main_visual .inner .mv_txt .more{
+
+}
