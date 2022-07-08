@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>조건문_else if</title>
+        <link href="css/reset.css" rel="stylesheet">
+        <link href="css/template.css" rel="stylesheet">
+    </head>
+    <body>
+        <section>
+            <h2>
+                조건문 else if
+            </h2>
+            <textarea class="ht5">
+                else if 조건문 : 조건식1, 조건식2 둘다 거짓일 경우 else 실행.
+
+                if(조건식1) {
+                    실행문1;  //조건식1 만족 실행문1 실행
+                } else if(조건식2) {
+                    실행문2;  //조건식2 만족 실행문2 실행
+                } else {
+                    실행문3;  //조건1,2 불만족 실행문3 실행
+                }
+
+                - else if 구문은 계속 추가할 수 있음
+                - 각 조건식 중 만족하는 블록수행 후 if 문 나가버림
+                - else 구문은 생략가능함
+                (작성시 위의 조건 모두 false일 경우 실행됨)
+
+
+            </textarea>
+            <script>
+                const a = 10, b = 20;
+
+                if(a==b) {
+                    console.log('a와 b가 같다면 실행');
+                } else if(a>b) {
+                    console.log('a가 b보다 크다면 실행');
+                } else {
+                    console.log('실행 1,2 둘다 불만족!');
+                }
+
+
+                // 년도
+                var year = prompt('아이맥은 몇년도에 출시되었을까요?','힌트 90년대');
+                if(year>1998) {
+                    document.write('년도를 조금 더 내리세요');
+                } else if(year < 1998) {
+                    document.write('년도를 조금 더 올리세요');
+                } else {
+                    document.write('1998년 맞추셨습니다!');
+                }
+
+                //교통수단
+                var trans = prompt('오늘 이용한 대중교통은?','버스 또는 택시 입력');
+                var price;
+                if(trans == '버스') {
+                    price = 1500;
+                } else if(trans == '택시') {
+                    price = 2500;
+                }  
+                document.write(price);
+
+
+
+            </script>
+        </section>
+        
+        <section>
+            <h2>
+            </h2>
+            <textarea class="ht5">
+            </textarea>
+        </section>
+    </body>
+</html>
