@@ -32,36 +32,92 @@
 
             </textarea>
             <script>
-                const a = 10, b = 20;
+                // const a = 10, b = 20;
 
-                if(a==b) {
-                    console.log('a와 b가 같다면 실행');
-                } else if(a>b) {
-                    console.log('a가 b보다 크다면 실행');
+                // if(a==b) {
+                //     console.log('a와 b가 같다면 실행');
+                // } else if(a>b) {
+                //     console.log('a가 b보다 크다면 실행');
+                // } else {
+                //     console.log('실행 1,2 둘다 불만족!');
+                // }
+
+
+                // // 년도
+                // var year = prompt('아이맥은 몇년도에 출시되었을까요?','힌트 90년대');
+                // if(year>1998) {
+                //     document.write('년도를 조금 더 내리세요');
+                // } else if(year < 1998) {
+                //     document.write('년도를 조금 더 올리세요');
+                // } else {
+                //     document.write('1998년 맞추셨습니다!');
+                // }
+
+                // //교통수단
+                // var trans = prompt('오늘 이용한 대중교통은?','버스 또는 택시 입력');
+                // var price;
+                // if(trans == '버스') {
+                //     price = 1500;
+                // } else if(trans == '택시') {
+                //     price = 2500;
+                // }  
+                // document.write(price);
+
+                // var member = prompt('직함을 입력하세요','사원 팀장');
+                // var noti;
+
+                // if(member == '사원') {
+                //     noti = '사원님 반갑습니다';
+                // } else if(member == '팀장') {
+                //     noti = '팀장님 어서오세요';
+                // } else if(member == '') {
+                //     noti = '직함을 알려주세요';
+                // } else {
+                //     noti = '';
+                // }
+
+                // alert(noti);
+
+                // var color = prompt('원하는 색상을 작성하세요','빨강 노랑 파랑');
+
+                // if(color == '빨강') {
+                //     document.write("<p style='background: #f00'>빨강</p>");
+                // } else if(color == '노랑') {
+                //     document.write("<p style='background: #fe0'>노랑</p>");
+                // } else if(color == '파랑') {
+                //     document.write('<p style="background: #00f">파랑</p>')
+                // }
+                
+                // var min = prompt('주민번호 뒷 첫 숫자 입력해주세요.','1~4사이');
+                // if(min == 1 || min == 3) { // 홀수
+                //     document.write('당신은 남성입니다.');
+                // } else if(min == 2 || min == 4){
+                //     document.write('당신은 여성입니다.');
+                // } else {
+                //     alert('틀렸어요. 숫자 1~4 사이 숫자를 입력해주세요!');
+                // }
+
+                // var pass = 90;
+                var pass = prompt('귀하의 점수는?','0~100점 입력'); 
+                var point = '';
+                
+                if(pass > 100) {
+                    document.write('0~100사이의 점수만 입력하세요');
+                } else if(pass >= 90) {
+                    point = '채용합격자 입니다.';
+                } else if(pass >= 80) {
+                    point = '1차 면접합격자 입니다.';
+                } else if(pass >= 70) {
+                    point = '2차 면접합격자 입니다.';
+                } else if(pass >= 60) {
+                    point = '재시험 대상자 입니다.';
                 } else {
-                    console.log('실행 1,2 둘다 불만족!');
+                    point = '지원해주셔서 감사합니다.';
                 }
 
+                document.write('<strong>귀하는</strong>' + point);
 
-                // 년도
-                var year = prompt('아이맥은 몇년도에 출시되었을까요?','힌트 90년대');
-                if(year>1998) {
-                    document.write('년도를 조금 더 내리세요');
-                } else if(year < 1998) {
-                    document.write('년도를 조금 더 올리세요');
-                } else {
-                    document.write('1998년 맞추셨습니다!');
-                }
 
-                //교통수단
-                var trans = prompt('오늘 이용한 대중교통은?','버스 또는 택시 입력');
-                var price;
-                if(trans == '버스') {
-                    price = 1500;
-                } else if(trans == '택시') {
-                    price = 2500;
-                }  
-                document.write(price);
 
 
 

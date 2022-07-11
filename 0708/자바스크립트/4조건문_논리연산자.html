@@ -1,0 +1,258 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>4조건문_논리연산자</title>
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/template.css" rel="stylesheet">
+</head>
+
+<body>
+    <section>
+        <h2>
+            논리연산자
+        </h2>
+        <textarea class="ht5">
+            논리연산자 
+
+            논리곱연산자    &&  (and 그리고)
+            논리합연산자    ||      (or 또는)
+            부정연산자       !      (not 반대)
+
+            * 논리연산자 해석 ----
+            && (그리고 and)
+            - 모든값 true     출력 true
+            - 하나라도 false 출력 false
+
+            || (또는 or)
+            - 하나라도 true   출력 true
+            - 모든값이 false   출력 false 
+
+            ! (부정 not)
+            - 결과값 true : 반대로 출력 false
+            - 결과값 false : 반대로 출력 true
+            _____________________________
+            
+            * 논리연산자 예시로 이해 --
+            ex1) 아이유==가수&&남성
+            // 아이유는 가수 이고(and) 남성이다.
+            // 하나라도 false : 출력 false 
+
+            ex2) 아이유==가수||배우
+            // 아이유는 가수 이거나(or) 배우이다.
+            // 하나라도 true 이면 출력 true            
+        </textarea>
+        <script>
+            console.log('논리연산자');
+
+            var a;
+            var b = 20;
+            var c = 3;
+            var sum;
+
+            //sum = a == b && a != b;
+            // 1) a==b : a는 빈데이터, b는20  : 빈데이터==20 : false
+            // 2) a!=b  : a는 빈데이터, b는20  : 빈데이터!=20  : true
+            // 3) false && true = 하나라도 false 출력 false
+            // console.log(sum);
+
+            // sum = a == b || a != b;
+            // 1) a==b : false
+            // 2) a!=b : true
+            // 3) false || true : 하나라도 true   출력 true
+            // console.log(sum);
+
+            // sum = !(b <= c && a > c);
+            // 1) b<=c : 20<=3        : false
+            // 2) a>c   : 빈데이터>3  : false
+            // 3) (false && false) : false 출력
+            // 4) !false : 반대로 false => 최종출력 true
+            // console.log(sum);
+
+            const old = 20;
+            const name = '홍길동';
+
+            if (old < 20 && name === '홍길동') {
+                console.log('당신은 성인, 홍길동 확인되었습니다.');
+            }
+
+            if (old >= 20 && name === '성시경') {
+                // 하나라도 false 출력 false
+                // if 불만족 출력안됨.
+                console.log('당신은 성인만 확인!');
+            }
+
+            if (old >= 20 || name === '홍길동') {
+                // 하나라도 true   출력 true
+                console.log('당신은 성인, 홍길동 확인했습니다');
+            }
+
+            if (old >= 20 || name === '성시경') {
+                // 하나라도 true   출력 true
+                // if (true) => 출력
+                console.log('당신은 나이만 확인!');
+            }
+
+            console.log(' 그리고 && ');
+
+            let nums = 10;
+            if (nums) {
+                console.log('참!');     // nums할당값없어서 false => 출력x
+            }
+            nums && console.log(nums);
+            // 1) 변수값 할당없으면 false => 실행불가
+            // 2) 변수값 할당되었다는 자체 true => 출력
+
+            /* truethy 와 falsy의 이해
+            if 조건문에서 불린(true / false) 값으로만 표현됨.
+
+            undefined, null,, 등의 불린값이 아닌 형태를 가진다면
+            불린값으로의 형변환 이루어져야 하므로
+            이런개념 truethy 와 falsy.
+
+            falsy 값 6가지 : false, 0, undefined, null, NaN,' '
+            => if(false) 라고 인식시켜줌.
+
+            6가지 외 나머지값을 truthy 라고 생각하면됨.
+
+            * true/flase 와 truethy 와 falsy와 같은것은 아님.           
+            */
+
+            let under;  // undefined
+
+            if (under === false) {
+                console.log('false와 falsy는 같다');
+            } else {
+                console.log('둘다 다르다. 형변환만 해주는 개념');
+            }
+            /*
+            var iu = 1;
+            var song = 10;
+            var act = 20;
+            var age = 30;
+            var singer;
+            
+            // singer = iu > song || song >= act || act > age;
+            //          1 > 10    ||  10 >= 20     ||  20 > 30 
+            //            false     ||     false        ||   false
+            //          출력 false
+
+            // singer = iu > song || song >= act || act <= age;
+            //          1 > 10    ||   10   >= 20  ||  20 <= 30
+            //            false     ||       false      ||     true 
+            //          출력 true
+
+            //singer = iu <= song && song >= act && act <= age;
+            //          1  <=  10  &&   10   >= 20 &&  20  <=30
+            //              true     &&        false     &&     true
+            //          출력 false
+
+            // singer = iu <= song && song <= act && act <= age;
+            //          1  <=  10   &&  10   <= 20 &&  20  <= 30
+            //             true       &&       true      &&     true
+            //           출력 true
+
+            singer = !(iu > age);
+            //          !(1 > 30) => !(false) => 출력true
+
+            document.write('싱어는 ' + singer);
+            */
+
+            let age = 33;
+            if (age > 20 && age < 60) {
+                console.log('당신은 소집대상자 입니다');
+            } else {
+                console.log('당신은 소집대상자가 아닙니다.');
+            }
+            /*
+            var score = prompt('점수를 입력하세요', '100만점');
+            var pass = prompt('합격점수 입력하세요', '커트라인80');
+
+            if (score >= 80 && pass >= 80) {
+                alert('축하합니다 합격입니다');
+            } else {
+                alert('불합격입니다');
+            }
+            */
+            /*
+            const qna = prompt('시험점수는?', '');
+            const ans = qna > 70;   // 70점 초과 71~
+
+            if (!ans) {
+                document.write('70점 이하 불합격!');
+            } else {
+                alert('70점 초과 합격!');
+            }
+            */
+            /*
+            var ccel = confirm('고객님 결제하시겠습니까?');
+            if (ccel) {
+                // alert('결제되었습니다');     // 이문구없다고생각.
+            } else {
+                alert('취소되었습니다');
+            }
+
+            if(!ccel){
+                alert('취소되었습니다');
+            }
+            */
+            /*
+            부정연산자는 true인 경우는 실행하지 않고,
+            false 인 경우만 실행하고 싶을때 사용.           
+            */
+
+            const flo = '꽃';
+            const clr = 'reds';
+            const kinds = true;    // 장미
+
+            if (flo === '동물' && clr === 'blues' || kinds) {
+                console.log('기념일 선물');
+            } else {
+                console.log('다음 기회에ㅜㅜ');
+            }
+
+            // 1) 우선순위 : and의 순서가 or 보다 우선한다.
+            // if ((flo === '동물' && clr === 'blues') || kinds)
+
+            // if (flo === '동물' && (clr === 'blues' || kinds))
+
+        </script>
+    </section>
+
+    <section>
+        <h2>
+            연산자 우선순위
+        </h2>
+        <textarea class="ht5">
+        1) 연산자의 종류 정리
+        
+        대입연산자 (=)
+        사칙연산자 ( + - * / % )
+        비교연산자 ( > < >= <=  === !==)
+        논리연산자 ( &&  ||  ! )
+        복합대입연산자 (+= -= *= /= %=)
+        
+        증감연산자 (++ , --)
+        ___________________________________________
+        
+        2) 연산자의 우선순위
+
+        1. 단항(증감) 연산자 (++, --, !)
+        2. 사칙 연산자 
+        3. 비교 연산자
+        4. 논리 연산자 
+        5. 복합 대입 연산자
+
+        예시) ++a * b <= c 
+
+        // 1) a에 ++ 먼저함   => 단항(증감) 1순위
+        // 2) x b                  => 사칙 2순위 
+        // 3) 곱한값을  <= c  => 비교 3순위 
+        
+        </textarea>
+    </section>
+
+</body>
+
+</html>

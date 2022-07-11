@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 해답</title>
+</head>
+<body>
+    <script>
+    // 학습내용 '출력' ----------
+    console.log('홍길동 안녕');
+    alert('알림을 확인하세요'); 
+    confirm('취소하시겠습니까?');
+    document.write('웹화면에서 확인됩니다.');
+    prompt('당신의 이름은?', '');
+
+
+    // 학습내용 '문자형&숫자형' ----------
+    document.write(3+5 +'<br>');      // 8
+    document.write(10-7 +'<br>');     // 3
+    document.write(10*7 +'<br>');     // 70
+    document.write(20/4 +'<br>');     // 5
+    document.write(100/3 +'<br>');   // 33.33333..6
+    document.write(50%7 +'<br>');   // 나머지값 1
+
+    // Q7)      
+    var x=10;
+    var y=20;
+    console.log(x+y);    // 30    
+    alert(x-y);             // -10
+    confirm(x*y);         // 200
+    console.log(x/y);    // 0.5  
+    console.log(x%y);   // 10
+
+    // Q8)
+    var t1='나의폰은 ';
+    var t2='최신폰 입니다.'
+    var txt;
+    txt=t1+t2;
+    document.write(txt);
+    /*
+    해설) 문자형 + 문자형 = 나의폰은 최신폰 입니다. (띄어쓰기 인식되어)
+    */    
+
+    // Q9)
+    var singer='좋아하는 가수는?';
+    var song=prompt('좋아하는 가수는?','');
+    document.write('좋아하는 가수는? <strong>' + song + '</strong> 입니다.');
+    
+    // Q10)
+    var num1=prompt('num1의값','');
+    var num2=prompt('num2의값','');
+    var sum=num1+num2;
+    document.write('sum의 값은? ' + sum);
+    /*
+    해설) prompt 입력값은 문자열로 인식되므로 
+    문자,숫자 상관없이 순자적으로 결합되어 출력됨.
+    ex) 입력값: 5,7            => 57 (숫자더하기안됨)
+        입력값: 안녕, 하세요 => 안녕하세요
+    */
+
+
+    // 학습내용 '논리형' ----------
+    // Q1)
+    console.log(10 < 20);       // true
+    console.log(10 <= 20);     // true
+    console.log(10 > 20);       // false
+    console.log(10 >= 20);     // false
+    console.log(10 == 20);     // false
+    console.log(10 != 20);      // true
+    console.log(70 === '70');   // false
+    console.log(70 !== '70');    // true
+
+    // Q2)
+    n1=7;
+    n2=30;
+    k1='대한민국';
+    k2='우리나라';  
+
+    document.write( (n1<=n2) +'<br>');      // true  7<=30
+    document.write( (n1!==n2) +'<br>');     // true  7!==30
+    document.write( (k1>k2) +'<br>');        // false  ㄷ>o (ㄷ뒷순서o)
+    document.write( (n2!=k2) +'<br>');       // true  30!=우리나라
+    document.write( (n1>k1) +'<br>');        // false  7>대한민국 (숫자>문자 비교불가)
+    /* 
+    해설) 좌항 괄호()를 하지않으면 줄바꿈 되지 않을수있음. ( +때문 )
+    */
+    
+    // Q3)
+    var txt1=10;
+    var txt2='10';
+    var txt3='10cm';
+    var txt4='환영합니다';
+
+    console.log(typeof txt1);   // number 숫자
+    console.log(typeof txt2);   // string 문자
+    console.log(typeof txt3);   // string 문자
+    console.log(typeof txt4);   // string 문자
+
+
+
+    // 학습내용 '복합대입' ----------
+   // Q1)
+    var str='봄바람 ';
+    str +='휘날리며 ';
+    str +='흩날리는 벚꽃잎이'
+    document.write(str);
+    /*
+    해설) 봄바람 휘날리며 흩날리는 벚꽃잎이 (띄어쓰기 인식되어)
+    */
+
+
+
+     // 학습내용 '조건문' ----------
+    // Q1)
+    var jun=18;
+    if(jun<=18){
+        console.log('당신은 미성년자 입니다.');     // 출력
+    };
+
+
+    // Q2)
+    var young=20;
+    var old=35;
+    if(young>=old){
+        console.log('young은 old보다 크거나 같습니다.');    // 출력x
+    };
+    /*
+    해설) 조건식(20>35)이 false 이므로 문장이 출력되지 않음.
+    */
+
+
+    // Q3)
+    var input = prompt('숫자를 입력하세요', '');
+    if (input % 2 != 0) {   
+        document.write('<p>홀수를 입력하였습니다.</p>');
+    } else {
+        document.write('<p>짝수를 입력하였습니다.</p>');
+    };
+    /*
+    해설) input 나누기 2한 값의 나머지값이 0과 같지 않다. 
+    나머지값이 있다는것은 홀수 라는 뜻.
+    입력값이 홀수 true => if문 실행.
+    */
+
+
+    // Q4)
+    var walk = prompt('만보기 오늘 걸음수?', '');
+    if (walk >= 10000) {   
+        document.write('<p>목표달성! 만보성공!</p>');
+    } else {
+        document.write('<p>미션실패!</p>');
+    };
+    /*
+    해설) 숫자 10000 이상 입력시 true => if문 실행.
+    */
+
+    // Q5)
+    var test=prompt('오늘 자바스크립트 테스트 예상점수는?','100점 만점');
+    if(test>=70 && test<=100){
+        document.write('<h1>자바스크립트 기초 마스터!</h1>');
+    }else{
+        document.write('<h1>시작이반! 화이팅!</h1>');
+    };
+    /*
+    해설) 
+    (70이상 ~ 100이하) : 숫자 70이상 입력시 true => if문 실행.
+    &&(그리고) : 모든값true 출력true / 하나라도false 출력false.
+    */
+
+
+
+    </script>
+</body>
+</html>

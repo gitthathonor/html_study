@@ -1,0 +1,101 @@
+@charset "utf-8";
+h1{
+    margin:20px;
+}
+form{
+    margin:20px;
+}
+fieldset{
+    /*태그자체 기본선을 가짐. 없앨때 none처리*/
+    /*border:none;*/
+    padding:20px;
+    margin:20px 0;
+}
+legend{
+    font-size:20px;
+    padding:10px;
+}
+ul{}
+ul li{
+    padding:10px;
+}
+h3{
+    margin:10px 0;
+}
+/*
+== 입력폼 그룹지정 태그 ==
+<form> : 입력폼
+<fieldset>    : 입력폼이 다수일 경우, 그룹핑할 때 사용
+   <legend> : 그룹명 지정
+
+== input 태그 입력양식태그 ==
+: 아이디, 검색어, 입력하는 텍스트상자, 로그인버튼,,
+
+<input type="값">
+ex) 아이디, 비밀번호, 체크박스, 라디오버튼, 이메일,
+전화번호, 날짜, 시간, 이미지, 버튼,,,,,,
+
+== 1) 글자, 비밀번호 태그 속성 ==
+<input type="text">
+<input type="password">
+
+maxlength : 최대 글자 입력가능수.
+minlength : 최소 글자 입력수. (크롬, 안드로이드만 지원한정)
+size : 입력폼 기본 글자수 20 (변경가능)
+value : 기본 입력값. (서버전송되는값)
+required : 필수로 데이터를 입력하게 하는 속성.
+
+== label 태그 ==
+<label> 태그 : 폼요소에 레이블(명칭=이름)
+폼요소와 레이블텍스트가 서로 연결되어 있다는것을
+브라우저가 인식함.
+
+<label for="id명동일">텍스트</label>
+<input type="값" id="id명">
+____________________________________
+
+== 선택 목록 양식 ==
+<select name="이름" size="2" multiple>
+    <option value="전송값" selected>선택1</option>
+    <option value="전송값">선택2</option>
+</select>
+value="값"   : 서버 전송값
+=> 선택1을 선택시 선택1이 전송되는 것이 아니라
+value 속성값 1이 전달됨.
+
+size       : 미리 선택지 펼쳐서 보여줌.
+selected : 선택 미리 지정.
+multiple : 다중선택가능 (ctrl + 클릭)
+
+== <optgroup> ==
+: 선택목록이 너무 많을 경우 여러 항목을 그룹핑
+(하위그룹 데이터만 선택 가능)
+<optgroup label="그룹명">
+    ...
+</optgroup>
+
+== <datalist>
+: user가 선택대신 직접 입력할때 사용. 
+자동 완성 기능과 유사함. <input>과 함께 사용됨.
+
+list="id동일"       : 데이터 목록 사용 선언.
+label="이름"       : user 표시내용. 지정안할시 value 값 표시.
+
+== 텍스트 입력공간 태그 속성
+<textarea cols="50" rows="5"></textarea>
+cols="숫자"    : 텍스트 공간 가로길이
+rows="숫자"   : 텍스트 공간 세로길이(줄수)
+
+== 서버 전송, 리셋 버튼 태그 속성 ==
+: 서버에 전송역할을 해주는 태그 .
+(웹접근성 스크린 리더기 버튼 용도로 명확히 인식)
+type="submit"    : 제출 (user가 폼에 입력한 정보를 서버로 전송하는 버튼)
+type="reset"       : 초기화(입력된 모든 정보를 재설정. 모두삭제)
+
+value="내용"       : 버튼에 표시할 내용 작성.
+* 브라우저 상관없이 모두 사용 가능.
+*/
+
+
+
+
