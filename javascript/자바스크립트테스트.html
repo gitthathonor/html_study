@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <title>자바스크립트테스트</title>
+        <script>
+            // 출력
+            console.log('홍길동 안녕');
+            alert('알림을 확인하세요');
+            confirm('취소하시겠습니까?');
+            document.write('웹화면에서 확인됩니다.<br>');
+            prompt('당신의 이름은?','');
+            
+
+            // 문자형&숫자형
+            document.write(3+5+'<br>'); 
+            document.write(10-7+'<br>');
+            document.write(7*3+'<br>');
+            document.write(20/4+'<br>');
+            document.write(100/3+'<br>');
+            document.write(50/7+'<br>');
+
+            var x = 10, y = 20;
+            alert(x+y);
+            alert(x-y);
+            confirm(x*y);
+            console.log('x/y = ' + x/y);
+            console.log('x%y = ' + x%y);
+
+            var t1 = '나의 폰은';
+            var t2 = '최신폰 입니다.';
+            var t3 = t1 + " " + t2;
+            document.write(t3 + '<br>');
+
+            var singer = '좋아하는 가수는?';
+            var song = prompt('좋아하는 가수는?','');
+            document.write(singer + ' <strong>' + song + '</strong> 입니다. <br>');
+
+            var num1 = prompt('','');
+            var num2 = prompt('','');
+            var sum = Number(num1) + Number(num2);
+            document.write('sum의 값은? ' + sum + '<br>');
+
+            // 논리형
+            console.log(10<20);
+            console.log(10<=20);
+            console.log(10>20);
+            console.log(10>=20);
+            console.log(10==20);
+            console.log(10!=20);
+            console.log(70 ==='70');
+            console.log(70 !=='70');
+
+            var n1 = 7, n2 = 30;
+            var k1 = '대한민국', k2 = '우리나라';
+            document.write(n1<=n2);
+            document.write(n1!==n2);
+            document.write(k1>k2);
+            document.write(n2 != k2);
+            document.write(n1 > k1);
+
+            var txt1 = 10, txt2 = '10', txt3 = '10cm', txt4 = '환영합니다';
+            console.log(typeof txt1);
+            console.log(typeof txt2);
+            console.log(typeof txt3);
+            console.log(typeof txt4);
+
+            // 복합대입
+            // arr = {'봄바람', '휘날리며', '흩날리는 벚꽃잎이'};
+
+            var str;
+            str += '<br>봄바람';
+            str += ' 휘날리며';
+            str += ' 흩날리는 벚꽃잎이';
+
+            document.write(str);
+
+            // 조건문
+            var jun = 18;
+            if(jun <= 18) {
+                console.log('당신은 미성년자 입니다.');
+            }
+
+            var young = 20, old = 35;
+            if(young >= old) {
+                console.log('young은 old보다 크거나 같습니다.');
+            }
+
+            var input = prompt('숫자를 입력하세요', '');
+
+            if(Number(input)%2 != 0) {
+                document.write('<p>홀수를 입력하였습니다.</p>');
+            } else {
+                document.write('<p>짝수를 입력하였습니다.</p>');
+            }
+
+            var test = prompt('오늘 자바스크립트 테스트 예상점수는?', '100점 만점');
+
+            if(Number(test)>=50 && Number(test) <= 100) {
+                document.write('<h1>자바스크립트 기초 마스터!</h1>');
+            } else {
+                document.write('<h1>시작이반! 화이팅!</h1>');
+            }
+
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>
