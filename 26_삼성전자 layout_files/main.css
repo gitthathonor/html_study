@@ -96,7 +96,6 @@ li를 대상으로 보는 것이 좋음.
     height: 700px;
     background: #cce;
     margin: 0 auto;
-    position:relative;
 }
 
 /*  
@@ -123,10 +122,8 @@ margin-right: auto;
 
 #main_visual .inner .mv_txt{
     padding-top: 220px;
-    padding-left: 150px;
-    
     /*  
-    웹사이트의 특성상 큰 영역구조에 첫번째 자식태그의 top 또는 bottom으로 여백을 지정할 경우 부모태그 전체로 여백이 지정되는 경우 발생
+    웹사이트의 특성ㅅ아 큰 영역구조에 첫번째 자식태그의 top 또는 bottom으로 여백을 지정할 경우 부모태그 전체로 여백이 지정되는 경우 발생
     => margin대신 padding및 다른 속성으로 대체사용
 
     */
@@ -150,78 +147,4 @@ margin-right: auto;
     /* a태그는 inline요소로 공간을 가질 수 없음
     글자에만 a링크가 적용되면 ux측면에서 부적함
     파랑버튼 전체를 a링크 대상으로 인식시켜야 하므로 block요소로 처리하여 인식시킴 */
-}
-
-
-#main_visual .inner .btn_prev, #main_visual .inner .btn_next{
-    width: 50px;
-    height: 50px;
-    border-radius: 50px;
-    border: 2px solid #00f;
-    text-align: center;
-    line-height: 50px;
-    position: absolute; top: 50%; margin-top: -27px;
-    left: 50%;
-
-    /*  
-    == 태그 가로에서 가운데 배치하는 3가지 공식 ==
-    1. 인라인요소 : {text-align:center}
-    2. 블록요소(기본) : {width:값; margin:0 auto}
-    3. 블록요소 : 블록요소 태그가 position속성을 가졌을 때, margin: 0 auto; 속성값을 함께 사용할 수 없음 => 적용자체가 불가 {position:absolute; left:50%; margin-left: -현태그가로너비의 반값; top 또는 bottom:값;}
-    ** 부모태그 공간값이 정확하지 않고, 100% 비율로 기준을 잡고 있을 경우에는 px 고정단위를 적용할 수 없으므로 %로 위치값을 지정해야함.
-    */
-
-}
-
-#main_visual .inner .btn_prev{
-    margin-left:  -600px;
-}
-
-#main_visual .inner .btn_next{
-    margin-left: 548px;
-}
-
-
-#main_visual .inner .btn_prev a, 
-#main_visual .inner .btn_next a{
-   color: #00f;
-   display: block;
-}
-
-#main_visual .inner .btn_prev:hover,
-#main_visual .inner .btn_next:hover{
-    background: #00f;
-}
-
-
-#main_visual .inner .btn_prev:hover a, 
-#main_visual .inner .btn_next:hover a{
-    color:#fff;
-}
-
-/* #container start ----------- */
-
-#container{}
-
-/* 공통 style */
-
-#container .cont_tit{
-    font-size: 40px;
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.cont01{
-    background: #8df;
-    padding: 100px 0;
-}
-
-.cont01 .inner{
-    width: 1200px;
-    background: #cea;
-    margin: 0 auto;
-}
-
-.cont01 .product{
-    
 }

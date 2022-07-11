@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!-- saved from url=(0078)http://127.0.0.1:5500/html&css/%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90/index.html -->
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="description" content="삼성전자 제품 서비스를 제공하는 웹사이트">
+        <title>26_삼성전자 layout</title>
+        
+        
+    <link href="./26_삼성전자 layout_files/main.css" rel="stylesheet"><link href="./26_삼성전자 layout_files/reset.css" rel="stylesheet"></head>
+
+    <body>
+        <!-- #wrap -->
+        <div id="wrap">
+            <!-- #header -->
+            <header id="header">
+                <!-- .logo -->
+                <h1 class="logo"><a href="http://127.0.0.1:5500/html&amp;css/%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90/index.html#">삼성전자</a></h1> 
+                <!-- .logo -->
+                <!-- navigation(gnb:global navigation bar) -->
+                <nav class="gnb">
+                    <!-- css에서 안 보이게 처리해줌 -->
+                    <h2>메인메뉴</h2>
+                    <!-- css에서 안 보이게 처리해줌 -->
+                    <ul>
+                        <li class="active"><a href="http://127.0.0.1:5500/html&amp;css/%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90/index.html#">브랜드스토리</a></li>
+                        <li><a href="http://127.0.0.1:5500/html&amp;css/%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90/index.html#">서비스안내</a></li>
+                        <li><a href="http://127.0.0.1:5500/html&amp;css/%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90/index.html#">제품소개</a></li>
+                        <li><a href="http://127.0.0.1:5500/html&amp;css/%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90/index.html#">프로모션</a></li>
+                        <li><a href="http://127.0.0.1:5500/html&amp;css/%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90/index.html#">고객의소리</a></li>
+                    </ul>
+                </nav>
+                <!-- navigation(gnb:global navigation bar) -->
+            </header>
+            <!-- #header -->
+            <!-- #main_visual -->
+            <div id="main_visual">
+                <!-- inner : 실제컨텐츠 영역 -->
+                <div class="inner">
+                    <!-- mv_txt -->
+                    <div class="mv_txt">
+                        <!-- .tit -->
+                        <p class="tit">
+                            <strong>Samsung Care+</strong> <br>
+                            걱정은 덜고 안심은 더하세요!
+                        </p>
+                        <!-- .tit -->
+
+                        <!-- .more -->
+                        <p class="more">
+                            <a href="http://127.0.0.1:5500/html&amp;css/%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90/index.html#">자세히보기</a>
+                        </p>
+                        <!-- .more -->
+                    </div>
+                    <!-- mv_txt --> 
+                    <!-- btn_prev -->
+                    <p class="btn_prev">
+                        <a href="http://127.0.0.1:5500/html&amp;css/%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90/index.html#">이전</a>
+                    </p>
+                    <!-- btn_prev -->
+                    <!-- btn_next -->
+                    <p class="btn_next">
+                        <a href="http://127.0.0.1:5500/html&amp;css/%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90/index.html#">다음</a>
+                    </p>
+                    <!-- btn_next -->
+                </div>
+                <!-- inner -->
+            </div>
+            <!-- #main_visual -->
+            <!-- #container -->
+            <main id="container"></main>
+            <!-- #container -->
+            <!-- #footer -->
+            <footer id="footer"></footer>
+            <!-- #footer -->
+        </div> 
+        <!-- #wrap -->
+    <!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+    
+</body></html>
