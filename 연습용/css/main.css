@@ -7,19 +7,153 @@
     background: #fe0;
 }
 
-#container{
+
+/* #container{
     position: relative;
     width: 1200px;
     height: auto;
     background: #00f;
     margin: 0 auto;
-}
+} */
 
+/* header 시작 */
 #wrap #header{
+    position:relative;
     width: auto;
-    height: 400px;
+    height: auto;
+    margin: 0 auto;
     background: #fff;
 }
+
+/* .header_bnr */
+
+#wrap #header .header_bnr{
+    min-width: 1200px;
+    font-size: 14px;
+    text-align: center;
+    height: 40px;
+    background: #5f0080;
+    line-height: 40px;
+}
+
+#wrap #header .header_bnr a{
+    display: flex;
+    color: #fff;
+    display: block;
+}
+
+#wrap #header .header_bnr a img{
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* #header_inner */
+#wrap #header #header_inner{
+    width: 1200px;
+    margin: 0 auto;
+    
+}
+
+
+
+
+/* .header_menu */
+
+#wrap #header #header_menu{
+    width: 1200px;
+    height: 30px;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+#wrap #header #header_menu .hMenu_list{
+    float: right;
+}
+
+/* 회원가입 */
+#wrap #header #header_menu .hMenu_list .hMenu_list_join{
+    float: left;
+    border-right: 1px solid #333;
+}
+
+#wrap #header #header_menu .hMenu_list .hMenu_list_join a{
+    color: #5f0080;
+    
+}
+
+/* 로그인 */
+#wrap #header #header_menu .hMenu_list .hMenu_list_login{
+    float: left;
+    border-right: 1px solid #333;
+}
+
+
+/* 고객센터 */
+#wrap #header #header_menu .hMenu_list .hMenu_list_help{
+    float: left;
+    position: relative;
+}
+
+/* header_menu a링크 */
+#wrap #header #header_menu .hMenu_list li .hMenu_list_sub{
+    float: left;
+    padding: 0 12px;
+    font-weight: bold;
+}
+
+
+
+/* 고객센터 서브메뉴 */
+#wrap #header #header_menu .hMenu_list .hMenu_list_help .sub{
+    display: none;
+    position: relative;
+    width: inherit;
+}
+
+
+#wrap #header #header_menu .hMenu_list .hMenu_list_help:hover{
+    background: #555;
+}
+
+#wrap #header #header_menu .hMenu_list .hMenu_list_help:hover .sub{
+    display: block;
+}
+
+
+
+#wrap #header #header_menu .hMenu_list .hMenu_list_help .sub li{
+    background: #fff;
+    display: block;
+}
+
+/* .header_logo */
+
+#wrap #header #header_inner #header_logo h1 a img{
+    width: 103px;
+    height: 79px;
+    margin: 0 auto;
+}
+
+
+/* .header_gnb */
+#wrap #header #header_gnb{}
+#wrap #header #header_gnb{}
+
+
+
+
+
+
+
+
+
+
+    
+/* header 끝 */
+
+
+
 
 #wrap #main_visual{
     width: auto;
@@ -28,14 +162,16 @@
 }
 
 #wrap #contents{
-    width: auto;
+    width: 1200px;
     height: 400px;
     background: #333;
+    margin: 0 auto;
 }
 
 #wrap #footer{
     width: auto;
     height: 400px;
     background: #f00;
+    margin: 0 auto;
 }
 
