@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+/* 전체 #wrap 디자인 */
+#wrap{
+    position: relative;
+    width: auto;
+    background: #fe0;
+}
+
+#container{
+    position: relative;
+    width: 1200px;
+    height: auto;
+    background: #00f;
+    margin: 0 auto;
+}
+
+#wrap #header{
+    width: auto;
+    height: 400px;
+    background: #fff;
+}
+
+#wrap #main_visual{
+    width: auto;
+    height: 400px;
+    background: #0ef;
+}
+
+#wrap #contents{
+    width: auto;
+    height: 400px;
+    background: #333;
+}
+
+#wrap #footer{
+    width: auto;
+    height: 400px;
+    background: #f00;
+}
+

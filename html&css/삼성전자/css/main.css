@@ -225,3 +225,29 @@ margin-right: auto;
 .cont01 .product{
     
 }
+
+.cont01 .product article{
+    width: 580px;
+    border: 1px solid #333;
+}
+
+.cont01 .product article .photo{
+    width: 580px;
+    height: 400px;
+    background: #cee;
+}
+
+.cont01 .product article .photo img{
+    width: 100%;
+    height: auto;
+}
+
+.cont01 .product article dl{
+    padding: 30px 0;
+}
+
+.cont01 .product article dl dt{
+
+}
+
+.cont01 .product article dl dd

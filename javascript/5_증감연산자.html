@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>증감연산자</title>
+<link href="css/reset.css" rel="stylesheet">
+<link href="css/template.css" rel="stylesheet">
+</head>
+
+<body>
+<section>
+	<h2>
+        증감연산자
+    </h2>
+    <textarea class="ht5">
+        증감연산자 : 숫자형데이터를 1씩 증가 또는 1씩 감소시킬 때 사용함
+        증감연산자의 위치가 변수 앞, 뒤에 오느냐에 따라 결과값이 달라짐
+
+        1) 후위
+        값++ : 값을 1씩 증가
+        값 -- : 값을 1씩 감소
+
+        2) 전위(연산 이후에 증감)
+        ++값 : 값을 1씩 증가
+        -- 값 : 값을 1씩 감소 
+
+    ________________________________
+    
+    
+    1) 후위 증감연산자 실행순서 
+    b = a++;
+    // 1) a를 b에 먼저 대입
+    // 2) a를 1씩 증가
+
+    2) 전위 증감연사자 실행순서
+    // 1) a를 1씩 증가함
+    // 2) 그 다음 b에 대입
+
+    ________________________________
+    ** 증감연산자의 문제점 발생
+    : 의도치 않은 값들의 증,감이 이뤄지게 되어 어플리케이션 등에서 에러가 발생하게 될 소지가 있음
+    "복합대입연산자" +=, -= 을 권장함
+
+
+   </textarea>
+   <script>
+        let out = 10;
+        // out++;
+        // out--;
+        // ++out;
+        --out;
+        console.log(out); 
+
+        let apple = 5;
+        let jobs = apple++;
+
+        console.log('잡스는 '  + jobs);
+        console.log('애플은 '  + apple);
+
+        //jobs값 : apple을 jobs에 대입 먼저하기 때문에
+        //jobs = 5
+
+        // apple값 : apple을 jobs에 대입후 +1 한 값
+        // apple = 6
+
+        let dot = 5;
+        let circle = ++dot;
+
+        console.log('닷은 ' + dot);
+        console.log('써클은 ' + circle);
+
+        // dot : +1먼저 = 6
+        // circle : 증가된 dot 6값을 circle에 대입 = 6
+
+        var i = 10;
+        var z = i++ *2;
+        console.log(z);
+        console.log(i);
+
+        // 1) i에 10을 대입
+        // 2) i(10) X 2를 먼저함 10 X 2 = 20 => z = 20
+        // 3) 그 후에 변수 i++ 증가함 => 10++ => i=11
+
+        var name = '내이름은';
+        name++;
+        console.log(name);
+
+
+   </script>
+</section>
+
+<section>
+	<h2>
+    </h2>
+    <textarea class="ht5">
+    </textarea>
+</section>
+
+</body>
+</html>
+
+
+
+
+

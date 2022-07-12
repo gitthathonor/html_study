@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>반복문_dowhile</title>
+<link href="css/reset.css" rel="stylesheet">
+<link href="css/template.css" rel="stylesheet">
+</head>
+
+<body>
+<section>
+	<h2>
+        do_while문
+    </h2>
+    <textarea class="ht5">
+        실행문을 반드시 한 번 실행하고 조건식을 판별해서 반복함
+
+        var 변수 = 초기값;
+        do{
+            실행문;  // 1) 우선 실행
+            증감식; 
+        } while(조건식);  // 2) 조건식 검사
+                            // 참 true일 경우 3) 증감식 실행
+    </textarea>
+    <script>
+        var i = 0;
+        do {
+            console.log(i);
+            i++;
+        } while(i<10);
+
+        var hello = 10;
+        do{
+            console.log('안녕하세요');
+            hello++;
+        } while(hello < 3);
+        
+            
+        var x = 1;
+        var sum = 0;
+
+        do {
+            sum += x;  // sum(0) + 1 + 2 + ....
+            x++;
+        } while(x <= 10);
+        document.write('합계는?'  + sum);
+
+
+        var attack = 10;
+        var depend = 1;
+        do{
+            document.wirte('게임시작');
+            attack++;
+        } while(attack == depend);
+
+
+
+        </script>
+</section>
+
+<section>
+	<h2>
+    </h2>
+    <textarea class="ht5">
+    </textarea>
+</section>
+
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+/* 구글폰트 Nanum Gothic */
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: #111;
+}
+
+img{
+    vertical-align: top;
+    border: none;
+}
+
+ul, ol{
+    list-style: none;
+}

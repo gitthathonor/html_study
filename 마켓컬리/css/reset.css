@@ -10,9 +10,13 @@
 }
 
 body{
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Noto Sans KR, sans-serif';
     font-size: 16px;
     line-height: 20px;
+}
+
+ul, ol{
+    list-style: none;
 }
 
 a{
@@ -20,23 +24,20 @@ a{
     text-decoration: none;
 }
 
-ul, ol{
-    list-style: none;
-}
-
 img{
     vertical-align: top;
     border: none;
 }
+
 
 .cf{
 
 }
 
 .cf::after{
-    content:"";
-    display:block;
-    clear:both;
+    content: "";
+    display: block;
+    clear: both;
 }
 
 

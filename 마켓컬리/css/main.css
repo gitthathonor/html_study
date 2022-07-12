@@ -1,4 +1,128 @@
 @charset "UTF-8";
 
 /* 웹사이트 전체 영역 */
-#wrap{}
+#wrap{
+    box-sizing: border-box;
+    background: #5f3;
+}
+
+/* header시작 */
+#header{
+    position: relative;
+    background: #fe0;
+}
+
+.header_bnr{
+    position: relative;
+    z-index: 1;
+    min-width: 1200px;
+    text-align: center;
+    line-height: 42px;
+    font-size: 14px;
+    background: #5f0080;
+}
+
+.header_bnr a{
+    width: 1920px;
+    height: 42px;
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    display: block;
+}
+
+.header_bnr_img{
+    width: 42px;
+    height: 42px;
+    vertical-align: top;
+}
+
+/* .header_bnr_inner{
+    position: absolute;
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+} */
+
+
+/* .header_bnr_inner .header_bnr_btn{
+    background-image: url(https://res.kurly.com/pc/ico/1908/ico_close_fff_42x42.png);
+    width: 42px;
+    height: 42px;
+    background-color: transparent;
+    border: 0;
+    text-indent: -9999px;
+    position: absolute;
+    bottom: 0;
+    right: -15px;
+} */
+
+/* 회원가입, 로그인 메뉴 시작 */
+
+.header_userMenu{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.header_userMenu::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+.header_userMenu .userMenu_list{
+    float: right;
+}
+
+
+.header_userMenu .userMenu_list li{
+    padding: 10px 0 0 0 ;
+    float: left;
+    position: relative;
+}
+
+.header_userMenu .userMenu_list li .link_menu{
+    float: left;
+    width: 100px;
+    height: 30px;
+    display: block;
+    padding: 0 10px;
+}
+
+.header_userMenu .userMenu_list
+.userMenu_list_join{
+}
+.header_userMenu .userMenu_list
+.userMenu_list_login{}
+.header_userMenu .userMenu_list
+.userMenu_list_help{}
+
+/* 회원가입, 로그인 메뉴 끝 */
+
+
+
+/* 로고 시작 */
+
+
+
+
+/* 로고 끝 */
+
+/* 전체 내비게이션 시작 */
+/* 전체 내비게이션 끝 */
+
+/* header 끝 */
+
+/* #main_visual 시작 */
+
+/* #main_visual 끝 */
+
+/* main 시작 */
+
+/* main 끝 */
+
+/* footer시작 */
+/* footer끝 */
+
+
