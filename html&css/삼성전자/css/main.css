@@ -318,10 +318,86 @@ margin-right: auto;
     padding-top: 30px; /* h180 */
 }
 
-#footer 
+#footer_inner{
+    width: 1200px;
+    margin: 0 auto;
+    background: rgb(238, 226, 4);
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+}
+
+.flogo{
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: bold;
+}
+
+.fmenu{
+    margin-bottom: 15px;
+}
 
 
+.fmenu ul{
+    display: -webkit-flex;
+    display: flex;
+    width: 600px;
+    background: #cca;
+    justify-content: space-between;
 
+}
+
+.fmenu ul li{
+    border-right: 1px solid #333;
+    flex: 0 1 110px;
+    text-align: center;
+}
+
+.fmenu ul li:nth-child(1){
+    text-align: left;
+    flex: 0 1 80px;
+}
+
+
+.fmenu ul li:nth-child(2){
+    flex: 0 1 150px;
+}
+
+.fmenu ul li:last-child{
+    border-right: none;
+}
+
+.finfo{
+    font-size: 14px;
+
+}
+
+.copy{
+    font-size: 12px;
+}
+
+.family{
+    width: 150px;
+    height: 30px;
+    border: 1px solid #333;
+    border-radius: 30px;
+    text-align: center;
+    line-height: 30px;
+}
+
+.family a{
+    display: block;
+}
+
+
+.family:hover{
+    background: #19f;
+    border-color: #19f;
+}
+
+.family:hover a{
+    color: #fff;
+}
 /* #footer */
 
 

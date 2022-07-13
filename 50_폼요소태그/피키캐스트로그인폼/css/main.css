@@ -1,5 +1,51 @@
 @charset "utf-8";
 
+html, body{
+    height:100%;
+}
+
 #wrap{
-    background:url(../img/bg_join4.jpg) no-repeat;
+    width: 100%;
+    /* height: 100%; */
+    height: 100vh;
+    background:url(../img/bg_join4.jpg) no-repeat center center;
+    /* 배경화면이 유동적으로 잡힌다. */
+    /* background-size: cover; */
+    object-fit: cover; 
+    /* 모니터마다 차이가 있다. */
+}
+
+/*  
+object-fit : img, video, object, svg 등 비율이 유지되는 요소들에게 사용하는 속성
+cover : 비율이 유지되면서 영역안에 가득 채워질 수 있도록
+contaion : 비율유지하면서 영역안에 요소가 가득 들어가도록
+none : 크기, 비율 상관없이 크기 가운데 배치
+fill : 요소 가득 채울 수 있도록 가로, 세로 강제 지정(비율x)
+*/
+
+
+.logo{
+    width: 212px;
+    height: 76px;
+    padding-top: 148px;
+    /* block형 요소들을 중앙에 오게끔 하는 표현 */
+    margin: 0 auto 60px auto;
+}
+
+/* 실제로 줄여줘야 하는 img */
+.logo img{
+    /* 유지보수의 차원에서 100% auto로 받아주는 것이 좋다. */
+    width: 100%;
+    height: auto;
+}
+
+.box{
+    width: 335px;
+    height: 400px;
+    background:rgba(255,255,255,0.7);
+    /* background: transparent; */
+    border: 1px solid #fff;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 45px 45px 40px 45px;
 }

@@ -1,0 +1,83 @@
+@charset "utf-8";
+
+#wrap{
+
+}
+
+#header{
+    height: 70px;
+    border-bottom: 1px solid #bbb;
+    background: #aee;
+}
+
+#header_inner{
+    width: 1200px;
+    height: 70px;
+    margin: 0 auto;
+    background: #eee;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    letter-spacing: -1px;
+    /*  
+    {letter-spacing:숫자}
+    글자 글자 사이 간격=  지간 설정할 때 사용
+    양수(+) : 간격이 넓어짐
+    음수(-) :  
+    */
+}
+
+.logo span{
+
+    font-weight: 400;
+    font-size: 28px;
+}
+
+
+.gnb {}
+.gnb h2{
+    display: none;;
+}
+
+.gnb ul{
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+}
+
+
+.gnb ul li{
+    width: 70px;
+    background: #eaa;
+    text-align: center;
+}
+
+
+.gnb ul li:hover a{
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+
+.util{}
+
+.util ul{}
+
+.util ul li{
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.util ul li a:hover{
+    color: #1d4;
+    /* 하위 포함관계 depth 구조가 없으므로
+    a에 바로 적용가능 */
+}
+
+
+
