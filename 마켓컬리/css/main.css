@@ -100,13 +100,13 @@
 }
 
 
-#wrap #header #header_menu .hMenu_list .hMenu_list_help:hover{
+/* #wrap #header #header_menu .hMenu_list .hMenu_list_help:hover{
     background: #555;
 }
 
 #wrap #header #header_menu .hMenu_list .hMenu_list_help:hover .sub{
     display: block;
-}
+} */
 
 
 
@@ -563,21 +563,61 @@ dl dd{
     color: #999;
     font-weight: bold;
     font-size: 14px;
+    padding: 0 0 0 15px;
 }
 
 
 /* .company */
 .company{
     width: 600px;
+    font-size: 12px;
+    color: #999;
+    font-weight: 600;
+    padding: 29px 0 0;
+}
+
+.company a{
+    color: #5f0080;
+    font-weight: 600;
 }
 
 
+.list_company{
+    padding: 0 0 29px;
+}
 
 
+.list_company li{
+    display: inline-block;
+}
+
+.list_company li a{
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+}
+
+.list_sns{
+    padding: 45px 0 0;
+}
 
 
+.list_sns li{
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.list_sns li:last-child{
+    margin-right: 0;
+}
+
+.list_sns li a{}
 
 
+.list_sns li a img{
+    width: 30px;
+    height: 30px;
+}
 
 
 
@@ -585,15 +625,67 @@ dl dd{
 #footer #footer_top .footer_link{
     width: 1200px;
     height: 97px;
-    padding: 20px 0 24px;
+    padding: 15px 0 15px;
     /* border: 1px solid #333; */
 }
+
+.footer_auth{
+    width: 962px;
+    height: 52px;
+}
+
+.footer_auth a{
+    display: inline-block;
+    margin-right: 10px;
+    padding: 15px 0 0;
+}
+
+
+.footer_auth a img{
+    width: 34px;
+    height: 34px;
+    margin: 0 10px 0 0;
+}
+
+
+.footer_auth a p{
+    float: right;
+    color: #999;
+    font-size: 10px;
+    padding: 1px 0 0;
+}
+
+/* #isms */
+
+
+/* #ePrivacy */
+
+/* #payments */
+
+
+
+
+
+
+
 
 /* #footer_copy */
 #footer #footer_copy{
     width: 1920px;
-    height: 103px;
-    padding: 19px 0 27px;
-    border: 1px solid #333;
+    height: 60px;
+    padding: 19px 0 19px;
+    background: #f7f7f7;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 10px;
+    color: #999999;
 }
+
+
+
+
+
+
+
+
 /* #footer 끝 */
