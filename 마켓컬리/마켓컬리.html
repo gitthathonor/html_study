@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/main.css" rel="stylesheet"> 
+    <link href="css/reset.css" rel="stylesheet"> 
+    
+    <title>마켓컬리</title>
+</head>
+<body>
+    <div id="wrap">
+                <header id="header">
+                    <div class="header_bnr">
+                        <a href="#">지금 가입하고 인기상품
+                            <b>100원</b>에 받아가세요!
+                            <img src="https://res.kurly.com/pc/ico/1908/ico_arrow_fff_84x84.png">
+                        </a>
+                    </div>
+                    <div id="header_inner">
+                        <div id="header_menu">
+                            <ul class="hMenu_list">
+                                <li class="hMenu_list_join"><a href="#" class="hMenu_list_sub">회원가입</a></li>
+                                <li class="hMenu_list_login"><a href="#" class="hMenu_list_sub">로그인</a></li>
+                                <li class="hMenu_list_help">
+                                    <a href="#" class="hMenu_list_sub">고객센터</a>
+                                    <ul class="sub">
+                                        <li>공지사항</li>
+                                        <li>공지사항</li>
+                                        <li>공지사항</li>
+                                        <li>공지사항</li>
+                                        <li>공지사항</li>
+                                        <li>공지사항</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="header_logo">
+                            <h1><a href="#"><img src="https://res.kurly.com/images/marketkurly/logo/logo_x2.png" alt="마켓컬리 로고" style="display: block;"></a></h1>
+                        </div>
+                        <div id="header_gnb">
+                                <div id="gnb_main">
+                                    <ul class="gnb">
+                                        <li class="gnb_menu1"><a href="#">전체 카테고리</a></li>
+                                        <li class="gnb_menu2"><a href="#">신상품</a></li>
+                                        <li class="gnb_menu3"><a href="#">베스트</a></li>
+                                        <li class="gnb_menu4"><a href="#">알뜰쇼핑</a></li>
+                                        <li class="gnb_menu5"><a href="#">특가/혜택</a></li>
+                                        <li class="gnb_menu6"><a href="#">검색</a></li>
+                                        <li class="gnb_menu7"><a href="#"><img src="https://res.kurly.com/pc/ico/2008/ico_delivery_setting.svg?ver=1" alt="위치"></a></li>
+                                        <li class="gnb_menu8"><a href="#"><img src="https://res.kurly.com/pc/service/pick/btn-heart-off.svg" alt="좋아하는 상품"></a></li>
+                                        <li class="gnb_menu9"><a href="#"><img src="https://res.kurly.com/pc/service/common/2011/ico_cart.svg" alt="장바구니"></a></li>
+                                    </ul>
+                                </div>
+                        </div>
+                    </div>
+                </header>
+
+                <div id="main_visual">
+                    <img id="main_visual_img" style="width: 1920px; height: 370px;" src="img/banner/banner1.png">
+                </div>
+
+                <!-- 일정시간 지나면 사진 바뀌기 -->
+                <script type="text/javascript">
+
+                    var obTimeOut; // clearTimeout() 함수를 이용하여 Timeout을 취소하기 위해 사용
+            
+                    var ObjectArray = new Array();
+                    ObjectArray[1] = "img/banner/banner1.png";
+                    ObjectArray[2] = "img/banner/banner2.png";
+                    ObjectArray[3] = "img/banner/banner3.png";
+                    ObjectArray[4] = "img/banner/banner4.png";
+                    
+                    var nObjectCnt = 0;
+
+                    function ShowDefaultRotate() // 스스로 자신을 호출하는 재귀함수
+                    {
+                        nObjectCnt++;
+
+                        if(nObjectCnt < ObjectArray.length) //배열의 갯수 이내일 때만 실행
+                        {
+                            document.getElementById("main_visual_img").src = ObjectArray[nObjectCnt];
+                            obTimeOut = setTimeout("ShowDefaultRotate()" , 8000); //8초후에 자기자신을 호출   
+                        } else {
+                            nObjectCnt = 0;
+                            ShowDefaultRotate();
+                            //clearTimeout(obTimeOut); //배열의 갯수만큼 반복하여 변환시킨 후에는 TImeout을 중지
+                        }
+                    }
+
+                    function startAnimation() {
+                        obTimeOut = window.setTimeout(ShowDefaultRotate,100); //윈도우 로드 후 0.1초 후에
+                        // 반복함수를 호출
+                    }
+
+                    window.onload = startAnimation; // 윈도우 로드시 이미지 변환함수 실행
+                    
+            
+                </script>
+
+                <!-- main 콘텐츠 -->
+                <main id="contents">
+
+                    <!-- #cont1 -->
+                    <div id="cont1">
+                        <div class="cont_inner">
+                            <div class="cont_tit">
+                                <h2>이 상품 어때요?</h2>
+                            </div>
+                            <div class="cont_container">
+                                <div class="cont_box">
+                                    <img class="cont_box_img" src="https://img-cf.kurly.com/shop/data/goods/1477568051626l0.jpg">
+                                    <div class="cont_box_txt">
+                                        <h3><a href="#">[김소영 아티장의 안단테]그랑도르즈 까망베르 2종</a></h3>
+                                        <div class="price"><span>12,700원</span></div>
+                                    </div>
+                                </div>
+                                <div class="cont_box">
+                                    <img class="cont_box_img" src="https://img-cf.kurly.com/shop/data/goods/1653035629518l0.jpeg">
+                                    <div class="cont_box_txt">
+                                        <h3><a href="#">[존쿡 델리미트]슈바인 학센 650g(냉동)</a></h3>
+                                        <div class="price">
+                                            <div class="sale">7%</div>
+                                            <div class="sPrice"><span>12,700원</span></div>
+                                            <div class="firstPrice"><span>18,000원</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cont_box">
+                                    <img class="cont_box_img" src="https://img-cf.kurly.com/shop/data/goods/big/201512/706_shop1_196633.jpg">
+                                    <div class="cont_box_txt">
+                                        <h3><a href="#">[사비니]트러플 소금</a></h3>
+                                        <div class="price">
+                                            <div class="sale">3%</div>
+                                            <div class="sPrice"><span>34,680원</span></div>
+                                            <div class="firstPrice"><span>36,000원</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cont_box">
+                                    <img class="cont_box_img" src="https://img-cf.kurly.com/shop/data/goods/1648204402992l0.jpg">
+                                    <div class="cont_box_txt">
+                                        <h3><a href="#">[사비니]트러플 치즈</a></h3>
+                                        <div class="price">
+                                            <div class="sale">3%</div>
+                                            <div class="sPrice"><span>37,740원</span></div>
+                                            <div class="firstPrice"><span>39,000원</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- #cont2 -->
+                    <div id="cont2">
+                        <div class="cont_inner">
+                            <div class="cont_tit">
+                                <h2>놓치면 후회할 가격</h2>
+                            </div>
+                            <div class="cont_container">
+                                <div class="cont_box">
+                                    <img class="cont_box_img" src="https://img-cf.kurly.com/shop/data/goods/165303822789l0.jpeg">
+                                    <div class="cont_box_txt">
+                                        <h3><a href="#">[마니커F&G] 옛날통닭 바사삭치킨 14조각</a></h3>
+                                        <div class="price">
+                                            <div class="sale">15%</div>
+                                            <div class="sPrice"><span>7,600원</span></div>
+                                            <div class="firstPrice"><span>8,980원</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cont_box">
+                                    <img class="cont_box_img" src="https://img-cf.kurly.com/shop/data/goods/1639962988844l0.jpg">
+                                    <div class="cont_box_txt">
+                                        <h3><a href="#">[풀무원]올바른 핫도그 5개입</a></h3>
+                                        <div class="price">
+                                            <div class="sale">15%</div>
+                                            <div class="sPrice"><span>5,933원</span></div>
+                                            <div class="firstPrice"><span>6,980원</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cont_box">
+                                    <img class="cont_box_img" src="https://img-cf.kurly.com/shop/data/goods/1657090094835l0.jpg">
+                                    <div class="cont_box_txt">
+                                        <h3><a href="#">[미소프레쉬]칼칼한 대구탕</a></h3>
+                                        <div class="price">
+                                            <div class="sale">15%</div>
+                                            <div class="sPrice"><span>10,800원</span></div>
+                                            <div class="firstPrice"><span>12,800원</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cont_box">
+                                    <img class="cont_box_img" src="https://img-cf.kurly.com/shop/data/goods/1657093170343l0.jpg">
+                                    <div class="cont_box_txt">
+                                        <h3><a href="#">[미소프레쉬]남도식 양념황태구이(냉동)</a></h3>
+                                        <div class="price">
+                                            <div class="sale">15%</div>
+                                            <div class="sPrice"><span>5,800원</span></div>
+                                            <div class="firstPrice"><span>6,900원</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- #cont_insta -->
+                    <div id="cont_insta">
+                        <div class="insta_top">
+                            <div><span>인스타그램 고객 후기</span></div>
+                            <p>더 많은 고객 후기가 궁금하다면?</p>
+                        </div>
+                        <div class="insta_main">
+                            <a href="#"><img src="https://scontent-nrt1-1.cdninstagram.com/v/t51.29350-15/292783029_165984399259947_6690219329530562031_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=3wFihwnc63gAX80RCqD&_nc_ht=scontent-nrt1-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AT_JTCRVevY36jWB8QMzlL7PYzXccONUtDoSQ5pYD9ff8g&oe=62D1A467"></a>
+                            <a href="#"><img src="https://scontent-nrt1-1.cdninstagram.com/v/t51.29350-15/292448076_787254822647739_5360871020123736657_n.webp?stp=dst-jpg&_nc_cat=110&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=EUSIXngpTuUAX-LNAUh&_nc_ht=scontent-nrt1-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AT9xPp0JDRM4AygNEGtblDD-QEWWfr0qTKOvY1jrTFK4Bg&oe=62D1C188"></a>
+                            <a href="#"><img src="https://scontent-nrt1-1.cdninstagram.com/v/t51.29350-15/292444205_591397595852824_2237850340373805856_n.webp?stp=dst-jpg&_nc_cat=108&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=UbeMnVntNEYAX-C9DaF&_nc_ht=scontent-nrt1-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AT8af5KZtycHnQscJ8rc-Jj7-LshnAwAV1HDe0nt8REn0Q&oe=62D297ED"></a>
+                            <a href="#"><img src="https://scontent-nrt1-1.cdninstagram.com/v/t51.29350-15/290771672_564102008429519_4012344194815424889_n.webp?stp=dst-jpg&_nc_cat=104&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=C_LrrbSCQGMAX8bWWDN&_nc_ht=scontent-nrt1-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AT9HP1rRl-I46kPa7gehweAuOdImrCpioZniqTf4j27hgQ&oe=62D1B8E4"></a>
+                            <a href="#"><img src="https://scontent-nrt1-1.cdninstagram.com/v/t51.29350-15/290766154_5123949417658995_1823569256422665377_n.webp?stp=dst-jpg&_nc_cat=109&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=RAty5G_xdPMAX-gWv45&_nc_ht=scontent-nrt1-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AT-NV77D0pAvsYSn8HxNJ3U8gNfZYNR73RNpvvTVqIoF2g&oe=62D13D43"></a>
+                            <a href="#"><img src="https://scontent-nrt1-1.cdninstagram.com/v/t51.29350-15/290345603_562364395343057_25507172942162605_n.webp?stp=dst-jpg&_nc_cat=107&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=Q-kmRs8UEegAX9lbIDZ&_nc_ht=scontent-nrt1-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AT8w-SuAa4jnrD-Uee3qxUFDhOzcQY0bahRJnGGcqqoVkw&oe=62D1234F"></a>
+                        </div>
+                        <div class="insta_bottom">
+                            <p>더 많은 고객 후기가 궁금하다면?</p>
+                            <div><a href="#">@marketkurly_regram</a></div>
+                        </div>
+                    </div>
+                </main>
+
+
+                <!-- main 콘텐츠 -->
+
+
+                <!-- #footer -->
+                <footer id="footer">
+
+                    <!-- #footer_top -->
+                    <div id="footer_top">
+                        <div class="footer_inner">
+                            <div class="cc">
+                                <h2 class="footer_tit">고객행복센터</h2>
+                                <div class="footer_call">
+                                    <div class="footer_sub_div"><span>1644-1107</span></div>
+                                    <dl>
+                                        <dt>365고객센터</dt>
+                                        <dd>오전 7시 - 오후 7시</dd>
+                                    </dl>
+                                </div>
+                                <!-- 카카오톡 문의 -->
+                                <div class="footer_kakao">
+                                    <div class="footer_sub_div"><a href="#">카카오톡 문의</a></div>
+                                    <div class="footer_sub_dl_div">
+                                        <dl>
+                                            <dt>365고객센터</dt>
+                                            <dd>오전 7시 - 오후 7시</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+
+                                <!-- 1:1 문의 -->
+                                <div class="footer_qna">
+                                    <div class="footer_sub_div"><a href="#">1:1 문의</a></div>
+                                    <div class="footer_sub_dl_div">
+                                        <dl>
+                                            <dt>24시간 접수가능</dt>
+                                            <dd>고객센터 운영 시간에 순차적으로 답변해드리겠습니다.</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="footer_bulkorder">
+                                    <div class="footer_sub_div"><a href="#">대량주문 문의</a></div>
+                                    <p>비회원의 경우 메일로 문의 바랍니다.</p>
+                                </div>
+                            </div>
+
+                            <!-- .company -->
+                            <div class="company">
+                                <ul class="list_company">
+                                    <li>컬리소개</li>
+                                    <li>컬리소개영상</li>
+                                    <li>인재채용</li>
+                                    <li>이용약관</li>
+                                    <li>개인정보처리방침</li>
+                                </ul>
+                                <span>I</span>
+                                <span>I</span>
+                                <span>I</span>
+                                <span>I</span>
+                                <span>I</span>
+                                <ul class="list_sns">
+                                    <li>인스타</li>
+                                    <li>페이스북</li>
+                                    <li>네이버 블로그</li>
+                                    <li>네이버 포스트</li>
+                                    <li>유튜브</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- .footer_link -->
+                        <div class="footer_link"></div>
+                    </div>
+
+
+                    <div id="footer_copy">
+                        
+                    </div>
+                </footer>
+                <!-- #footer -->
+
+    </div>
+</body>
+</html>

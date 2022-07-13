@@ -49,9 +49,33 @@
         var attack = 10;
         var depend = 1;
         do{
-            document.wirte('게임시작');
+            document.write('게임시작');
             attack++;
         } while(attack == depend);
+
+        var age = 30;
+        do{
+            document.write('당신의' + age + '번째 생일을 축하합니다.<br>');
+            age--;
+        } while(age>25);
+
+        var count = 10;
+        var newy = 1;
+
+        do{
+            document.write('카운트다운 시작!' + count + '<br>');
+            count--;
+        }while(count>=newy);
+        document.write('<strong>해피 뉴이어!</strong>');
+
+        var num = 4;
+        do{
+            alert('경고창이 뜨네요!');
+            
+            alert(4-num + '번째 반복');
+            num--;
+        }while(num);
+
 
 
 

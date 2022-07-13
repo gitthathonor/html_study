@@ -1,8 +1,8 @@
-/* 초기화 하는 stylesheet */
 @charset "utf-8";
 
-/* 구글 폰트 - noto sans */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+/* 구글폰트 Nanum Gothic */
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+
 
 *{
     margin: 0;
@@ -10,18 +10,15 @@
 }
 
 body{
-    font-family: 'Noto Sans KR, sans-serif';
+    font-family: 'Noto sans KR', sans-serif;
     font-size: 16px;
     line-height: 20px;
 }
 
-ul, ol{
-    list-style: none;
-}
-
 a{
-    color: #111;
+    border: none;
     text-decoration: none;
+    color: #111;
 }
 
 img{
@@ -29,15 +26,6 @@ img{
     border: none;
 }
 
-
-.cf{
-
+ul, ol{
+    list-style: none;
 }
-
-.cf::after{
-    content: "";
-    display: block;
-    clear: both;
-}
-
-

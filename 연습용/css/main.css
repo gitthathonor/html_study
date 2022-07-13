@@ -7,15 +7,6 @@
     background: #fe0;
 }
 
-
-/* #container{
-    position: relative;
-    width: 1200px;
-    height: auto;
-    background: #00f;
-    margin: 0 auto;
-} */
-
 /* header 시작 */
 #wrap #header{
     position:relative;
@@ -26,7 +17,6 @@
 }
 
 /* .header_bnr */
-
 #wrap #header .header_bnr{
     min-width: 1200px;
     font-size: 14px;
@@ -57,10 +47,7 @@
 }
 
 
-
-
 /* .header_menu */
-
 #wrap #header #header_menu{
     width: 1200px;
     height: 30px;
@@ -128,7 +115,6 @@
 }
 
 /* .header_logo */
-
 #wrap #header #header_inner #header_logo h1 a img{
     width: 103px;
     height: 79px;
@@ -137,29 +123,76 @@
 
 
 /* .header_gnb */
-#wrap #header #header_gnb{}
-#wrap #header #header_gnb{}
+#wrap #header #header_gnb{
+    text-align: center;
+    padding: 10px 0;
+}
 
 
 
+#header #header_gnb #gnb_main{
+
+}
 
 
+#header #header_gnb #gnb_main .gnb{
+   display: flex;
+   display: -webkit-flex;
+   justify-content: space-between;
+}
 
 
+#header #header_gnb #gnb_main .gnb li{
+   line-height: 36px;
+}
+
+#header #header_gnb #gnb_main .gnb li a{
+    display: block;
+    width: auto;
+    height: auto;
+    font-weight: bold;
+    color: rgb(100, 87, 87);
+}
+
+/* #header #header_gnb #gnb_main .gnb .gnb_menu7{
+    background-image: url(https://res.kurly.com/pc/ico/2008/ico_delivery_setting.svg?ver=1);
+}  */
+   
+
+#header #header_gnb #gnb_main .gnb .gnb_menu7 img:hover{
+    background-image: url(https://res.kurly.com/pc/ico/2010/ico_delivery_setting_on.svg);
+}
+
+/* #header #header_gnb #gnb_main .gnb .gnb_menu8{
+    background-image: url(https://res.kurly.com/pc/service/pick/btn-heart-off.svg);
+} */
 
 
+#header #header_gnb #gnb_main .gnb .gnb_menu8 img:hover{
+    background-image: url(https://res.kurly.com/pc/service/pick/btn-heart-hover.svg);
+}
+
+/* #header #header_gnb #gnb_main .gnb .gnb_menu8{
+    background-image: url(https://res.kurly.com/pc/service/pick/btn-heart-off.svg);
+} */
+
+#header #header_gnb #gnb_main .gnb .gnb_menu9 img:hover{
+    background-image: url(https://res.kurly.com/pc/service/common/2011/ico_cart_on.svg?v=1);
+}
 
     
 /* header 끝 */
 
 
-
-
-#wrap #main_visual{
+/* #wrap #main_visual{
     width: auto;
-    height: 400px;
-    background: #0ef;
-}
+    height: 370px;
+    background-image: url(../img/banner/banner1.png);
+} */
+
+
+
+
 
 #wrap #contents{
     width: 1200px;

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/main.css" rel="stylesheet"> 
     <link href="css/reset.css" rel="stylesheet"> 
+    
     <title>배치연습</title>
 </head>
 <body>
@@ -39,17 +40,97 @@
                             <h1><a href="#"><img src="https://res.kurly.com/images/marketkurly/logo/logo_x2.png" alt="마켓컬리 로고" style="display: block;"></a></h1>
                         </div>
                         <div id="header_gnb">
-                                <div id="">gnb</div>
-                                <div id="">검색</div>
-                                <div class="">아이콘1</div>
-                                <div class="">아이콘2</div>
-                                <div class="">아이콘3</div>
+                                <div id="gnb_main">
+                                    <ul class="gnb">
+                                        <li class="gnb_menu1"><a href="#">전체 카테고리</a></li>
+                                        <li class="gnb_menu2"><a href="#">신상품</a></li>
+                                        <li class="gnb_menu3"><a href="#">베스트</a></li>
+                                        <li class="gnb_menu4"><a href="#">알뜰쇼핑</a></li>
+                                        <li class="gnb_menu5"><a href="#">특가/혜택</a></li>
+                                        <li class="gnb_menu6"><a href="#">검색</a></li>
+                                        <li class="gnb_menu7"><a href="#"><img src="https://res.kurly.com/pc/ico/2008/ico_delivery_setting.svg?ver=1" alt="위치"></a></li>
+                                        <li class="gnb_menu8"><a href="#"><img src="https://res.kurly.com/pc/service/pick/btn-heart-off.svg" alt="좋아하는 상품"></a></li>
+                                        <li class="gnb_menu9"><a href="#"><img src="https://res.kurly.com/pc/service/common/2011/ico_cart.svg" alt="장바구니"></a></li>
+                                    </ul>
+                                </div>
                         </div>
                     </div>
                 </header>
-                <div id="main_visual"></div>
-                <main id="contents"></main>
-                <footer id="footer"></footer>
+
+                <div id="main_visual">
+                    <img id="main_visual_img" style="width: 1920px; height: 370px;" src="img/banner/banner1.png">
+                </div>
+
+                <!-- 일정시간 지나면 사진 바뀌기 -->
+                <script type="text/javascript">
+
+                    var obTimeOut; // clearTimeout() 함수를 이용하여 Timeout을 취소하기 위해 사용
+            
+                    var ObjectArray = new Array();
+                    ObjectArray[1] = "img/banner/banner1.png";
+                    ObjectArray[2] = "img/banner/banner2.png";
+                    ObjectArray[3] = "img/banner/banner3.png";
+                    ObjectArray[4] = "img/banner/banner4.png";
+                    
+                    var nObjectCnt = 0;
+
+                    function ShowDefaultRotate() // 스스로 자신을 호출하는 재귀함수
+                    {
+                        nObjectCnt++;
+
+                        if(nObjectCnt < ObjectArray.length) //배열의 갯수 이내일 때만 실행
+                        {
+                            document.getElementById("main_visual_img").src = ObjectArray[nObjectCnt];
+                            obTimeOut = setTimeout("ShowDefaultRotate()" , 10000); //1초후에 자기자신을 호출   
+                        } else {
+                            nObjectCnt = 0;
+                            ShowDefaultRotate();
+                            //clearTimeout(obTimeOut); //배열의 갯수만큼 반복하여 변환시킨 후에는 TImeout을 중지
+                        }
+                    }
+
+                    function startAnimation() {
+                        obTimeOut = window.setTimeout(ShowDefaultRotate,100); //윈도우 로드 후 0.1초 후에
+                        // 반복함수를 호출
+                    }
+
+                    window.onload = startAnimation; // 윈도우 로드시 이미지 변환함수 실행
+                    
+            
+                </script>
+
+                <!-- main 콘텐츠 -->
+                <main id="contents">
+                    <div id="cont1">
+                        <div class="cont_inner">
+                            <div><h2></h2></div>
+                            <div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="cont2">
+                        <div class="cont_inner"></div>
+                    </div>
+                    <div id="cont_insta">
+                    </div>
+                </main>
+
+
+                <!-- main 콘텐츠 -->
+
+                <!-- #footer -->
+                <footer id="footer">
+                    <div></div>
+                    <div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </footer>
+                <!-- #footer -->
 
     </div>
 </body>
