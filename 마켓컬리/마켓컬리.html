@@ -81,7 +81,7 @@
                         if(nObjectCnt < ObjectArray.length) //배열의 갯수 이내일 때만 실행
                         {
                             document.getElementById("main_visual_img").src = ObjectArray[nObjectCnt];
-                            obTimeOut = setTimeout("ShowDefaultRotate()" , 8000); //8초후에 자기자신을 호출   
+                            obTimeOut = setTimeout("ShowDefaultRotate()" , 4000); //4초후에 자기자신을 호출   
                         } else {
                             nObjectCnt = 0;
                             ShowDefaultRotate();
@@ -263,7 +263,7 @@
                                     <div class="footer_sub_div">
                                         <span>1644-1107</span>
                                     </div>
-                                    <div class="footer_sub_dl_div">
+                                    <div class="footer_sub_dl_div" id="footer_sub_cc">
                                         <dl>
                                             <dt>365고객센터</dt>
                                             <dd>오전 7시 - 오후 7시</dd>
