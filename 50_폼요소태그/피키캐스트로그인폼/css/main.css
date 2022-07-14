@@ -49,3 +49,120 @@ fill : 요소 가득 채울 수 있도록 가로, 세로 강제 지정(비율x)
     margin: 0 auto;
     padding: 45px 45px 40px 45px;
 }
+
+fieldset{
+    border:none;
+}
+
+legend{
+    display: none;
+}
+
+.login{
+    border-bottom: 2px solid #333;
+}
+
+.login input{
+    width: 100%;
+    border: none;
+    background: none;
+    height: 60px;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+label{
+    display: none;
+ }
+
+ .check{
+    font-size: 14px;
+    padding: 14px 0;
+ }
+
+ .check label{
+    display: inline-block;
+    margin: 0 30px 0 0;
+ }
+
+ .check input[type="checkbox"]{
+    margin: 3px 5px 0 0;
+ }
+
+/*  
+== 폼요소 입력양식태그 가상클래스 선택자 ==
+input:checked{}   :   체크박스일 경우 체크지정
+input:focus{}   :   텍스트일 경우 포커스 지정   
+input:enabled{} : 사용가능한 폼
+input:disabled{}  :  사용불가능한 폼
+
+== 속성 선택자 ==
+: 특정 속성 or 속성값 태그 선택시 [] 지정.
+
+
+*/
+
+.btn_login input{
+    width: 100%;
+    height: 55px;
+    background: #0af;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+
+#footer{
+    width: 100%;
+    height: 35px;
+    background: #333;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+
+#footer_inner{
+    width: 1024px;
+    background: #08e;
+    margin: 0 auto;
+}
+
+.fmenu{}
+.fmenu .more{
+    width: 140px;
+    background: #fed;
+    position: relative;
+}
+.fmenu .more .btn{
+    display: block;
+    height: 18px;
+    padding: 8.5px 0 8.5px 20px;
+    background: url(../img/icon_arr.png) no-repeat right 0;
+}
+
+
+.fmenu .more .list{
+    width: 138px;
+    background: #fff;
+    border: 1px solid #eee;
+    position:absolute;
+    left: 0;
+    bottom: 35px;
+    padding: 12px 0;
+    display: none;
+}
+
+.fmenu .more:hover .list{
+    display: block;
+}
+
+.fmenu .more .list li a{
+    display: block;
+    padding: 10px 20px;
+}
+
+.fmenu .more:hover .btn{
+    background-position: right -35px;
+}
+

@@ -255,21 +255,16 @@
 }
 #contents #cont1 .cont_inner .cont_container .cont_box{
     width: 250px;
-    /* margin: 0 auto; */
-    overflow: hidden;
+    height: auto;
+    overflow: hidden; 
 }
 
 
-#contents #cont1 .cont_inner .cont_container .cont_box .cont_box_img{
-    width: 250px;
-    height: 320px;
-    transition: transform 1s;
-}
 
-.cont_box:hover .cont_box_img{
-    transform: scale(1.5);
+.cont_inner .cont_container .cont_box .cont_box_img{
     width: 250px;
     height: 320px;
+    
 }
 
 

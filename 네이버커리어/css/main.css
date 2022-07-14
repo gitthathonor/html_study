@@ -103,6 +103,10 @@ poster : 영상로딩시 대체 이미지
 #main_video{
     width: 100%;
     height: 680px;
+    position: relative;
+
+    /* 원본 영상이 커서 스크롤바가 생긴다면 그걸 넘치지 않게 적어준다. */
+    overflow: hidden;
 }
 
 #main_video .mv video{
@@ -114,3 +118,58 @@ poster : 영상로딩시 대체 이미지
     transform: translate(-50%,0);
 }
 
+#main_video .mv_txt{
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+#main_video .mv_txt h3{
+    font-size: 100px;
+    line-height: 100px;
+    color: #fff;
+    /* 글자의 그림자를 주는 속성 text-shadow: 가로 세로 음영 색깔*/
+    text-shadow: 10px 10px 10px rgba(255,255,255,0.7);
+    /*  
+    == css3의 그림자 속성 ==
+    {text-shadow:가로위치 세로위치 번짐 색상;}
+    + : 오른쪽 / 아래
+    - : 왼쪽 / 위
+    */
+}
+
+#main_video .mv_txt .apply{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-150px, 80px);
+    width: 0;
+    transition: width 0.5s;
+}
+
+#main_video .mv_txt .apply:hover{
+    width: 300px;
+    background: #fff;
+}
+
+
+
+
+
+#main_video .mv_txt .apply a{
+    display: block;
+    width: 300px;
+    height: 60px;
+    line-height: 60px;
+    border: 2px solid #fff;
+    font-size: 20px;
+    color: #fff;
+}
+
+
+#main_video .mv_txt .apply:hover a{
+    color: #1d4;
+}
